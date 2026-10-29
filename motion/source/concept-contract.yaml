@@ -1,0 +1,33 @@
+subject_count: 3
+subjects:
+  - identity: >-
+      Stick-figure person from source/K0-alpha.png: curly dark hair, round head,
+      small round glasses with empty white lenses (no drawn pupils), smile,
+      white t-shirt, left arm extended with oval palm pressed to the left.
+  - identity: >-
+      Tuxedo cat from source/K0-alpha.png: black-and-white, sleeping with eyes
+      closed, placed to the left of the person's body under the extended arm.
+  - identity: >-
+      Seal-point cat from source/K0-alpha.png: cream body, dark points, red collar,
+      pink tag, blue eyes, sitting to the right of the person like the dog in
+      oiloil.org's hero.
+style: "copy exactly like that" (user), matching source/style-reference.png and K0-alpha.png
+motion_intent: >-
+  The stick figure's head stays still; only the pupils look toward the cursor
+  and remain inside the glasses. The sleeping tuxedo cat does not move. The
+  siamese's head turns slightly toward the cursor, like the oiloil.org dog.
+background_owner: page
+scene: null
+driver: pointer
+input_semantics: continuous
+time_control: scrub
+navigation: none
+clip_continuity: independent
+continuity:
+  - stick figure identity, hair, glasses, t-shirt, and line weight
+  - tuxedo cat markings; sleeping pose; position left of the person
+  - siamese markings, collar, tag; sitting to the right of the person
+  - left arm and palm stay fixed as if leaning on the headline
+aspect_ratio: "1:1"
+destination: >-
+  Hero, anchored to the word "makes"; desktop display about 560 CSS px wide.

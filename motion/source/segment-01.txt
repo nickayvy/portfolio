@@ -1,0 +1,28 @@
+Use the supplied first and last frames as the exact identity and design
+references for the stick-figure person and both cats. Preserve the same silhouette, anatomy, face, clothing, hair, glasses, line work, texture, and proportions in every frame. The subjects remain the same size and at the same anchored position throughout the shot. Do not add, remove, duplicate, or redesign any body part, accessory, feature, or prop.
+
+Preserve the original illustration style exactly. Keep line thickness,
+flat color regions, and edge sharpness consistent. Do not
+turn the subjects into volumetric CGI, photorealistic, painterly, or glossy imagery.
+
+Locked camera and locked framing. No camera pan, tilt, zoom, orbit, shake,
+reframing, perspective change, lens change, depth of field, or lighting change.
+The body and contact point remain fixed. Only the stick figure's head, hair, and eyes may move.
+
+Create one continuous clockwise head and gaze rotation cycle. The face and eyes
+of the stick-figure person remain oriented toward the camera at all times; do not rotate around
+to show the back of the head. An invisible target moves smoothly clockwise in a
+circle on the front screen plane (12 o'clock looking up, 3 o'clock looking
+right, 6 o'clock looking down, 9 o'clock looking left, returning cleanly to 12
+o'clock). The stick-figure person follows the target smoothly within a natural cone of vision,
+tilting and rolling its head without leaving the front-facing half-sphere. Pass
+through every intermediate angle at a constant rate without pausing or snapping.
+End exactly at the first frame pose for a seamless loop. Keep torso, left leaning arm, palm, legs, and both sitting cats
+completely stationary. No blinking, idle sway, or deformation.
+
+The entire background is one perfectly uniform flat chroma-key #00FF00
+rectangle in every frame. No gradient, texture, noise, floor plane, horizon,
+shadow, reflection, glow, particles, color variation, or lighting falloff on
+the background. Keep the subject fully separated from all image borders with
+generous padding. No cast shadow. No green object or reflected spill on
+the subject. No text, subtitle, watermark, border, or UI.

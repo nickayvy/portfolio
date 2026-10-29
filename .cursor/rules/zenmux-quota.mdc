@@ -1,0 +1,13 @@
+---
+description: Hard cap on ZenMux oil-motion generation for the Starter Builder Plan
+alwaysApply: true
+---
+
+# ZenMux Starter quota
+
+The oil-motion key is a **Starter Builder Plan** subscription key (`sk-subs-…`).
+
+- Stay at or under **50 Flows per rolling 5-hour window**. Do not hit Extra Usage / pay-as-you-go overflow.
+- One image or video call at a time. State estimated Flows and the window total before each call.
+- Stop and ask if a call would exceed the window or if cost is unclear. No automatic retries.
+- Test with `--dry-run` and low/medium quality. High quality only after the user approves a frame.

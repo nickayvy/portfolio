@@ -1,0 +1,13 @@
+Image 1 is a style reference only. Image 2 is the identity reference for two real cats.
+
+Draw a new illustration in exactly the drawing style of image 1: the person is a minimalist stick figure in thin, even, black ink lines on a white t-shirt with very light grey shading; the animals are flat cartoon illustrations with clean black outlines and soft flat color fills, like the dog in image 1. Do not copy any text, logo, grid or the dog from image 1.
+
+Composition, from left to right:
+- A generic stick-figure person standing upright, leaning slightly to the left with the left arm extended straight out to the left and the palm pressed flat against an invisible vertical wall at the far left edge. Round head, small round glasses, dot eyes, a small friendly smile, three short hair strands, plain white t-shirt, stick legs crossed casually at the ankles, simple rounded feet.
+- Two cats sitting on the same invisible ground line to the right of the person's feet, both facing the viewer:
+  1. The tuxedo cat from image 2 (top cat): black-and-white, black mask over the eyes and ears, white muzzle, chest and legs, pink nose, yellow-green eyes, long white whiskers.
+  2. The seal-point cat from image 2 (bottom cat): round, chunky British Shorthair build, cream body, dark seal-brown face, ears, legs and paws, blue eyes, red collar with a small pink tag.
+
+Keep each cat's real markings and proportions from image 2, translated into the cartoon style. The person is about twice as tall as the sitting cats.
+
+Fully transparent background. No floor, shadow, ground line, frame, text, letters, watermark or grid. Keep every subject fully inside the canvas with generous padding on all sides.

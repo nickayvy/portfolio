@@ -1,0 +1,3080 @@
+{
+  "source": "/Users/nick/Documents/GitHub/portfolio/motion/build/chroma/frame-preparation/frames",
+  "frameCount": 124,
+  "canvas": [
+    768,
+    768
+  ],
+  "summary": {
+    "medianSubjectHeightRatio": 1.0,
+    "subjectHeightRange": [
+      1.0,
+      1.0
+    ],
+    "centerXRange": [
+      0.5,
+      0.5
+    ],
+    "centerYRange": [
+      0.5,
+      0.5
+    ],
+    "medianFrameDifference": 0.0017948325163398694,
+    "warningCount": 116
+  },
+  "warnings": [
+    {
+      "frame": 1,
+      "type": "near-duplicate",
+      "value": 0.001419384304647785,
+      "message": "frame_00002.png is very similar to its previous frame"
+    },
+    {
+      "frame": 2,
+      "type": "near-duplicate",
+      "value": 0.000906210285039942,
+      "message": "frame_00003.png is very similar to its previous frame"
+    },
+    {
+      "frame": 3,
+      "type": "near-duplicate",
+      "value": 0.0005884906045751634,
+      "message": "frame_00004.png is very similar to its previous frame"
+    },
+    {
+      "frame": 4,
+      "type": "near-duplicate",
+      "value": 0.0005626758805374002,
+      "message": "frame_00005.png is very similar to its previous frame"
+    },
+    {
+      "frame": 5,
+      "type": "near-duplicate",
+      "value": 0.002099644834785766,
+      "message": "frame_00006.png is very similar to its previous frame"
+    },
+    {
+      "frame": 6,
+      "type": "near-duplicate",
+      "value": 0.0007134508896151053,
+      "message": "frame_00007.png is very similar to its previous frame"
+    },
+    {
+      "frame": 7,
+      "type": "near-duplicate",
+      "value": 0.0006409710875090777,
+      "message": "frame_00008.png is very similar to its previous frame"
+    },
+    {
+      "frame": 8,
+      "type": "near-duplicate",
+      "value": 0.0007450810185185186,
+      "message": "frame_00009.png is very similar to its previous frame"
+    },
+    {
+      "frame": 9,
+      "type": "near-duplicate",
+      "value": 0.0016500147512708788,
+      "message": "frame_00010.png is very similar to its previous frame"
+    },
+    {
+      "frame": 10,
+      "type": "near-duplicate",
+      "value": 0.0012857718318809005,
+      "message": "frame_00011.png is very similar to its previous frame"
+    },
+    {
+      "frame": 11,
+      "type": "near-duplicate",
+      "value": 0.0011940019063180827,
+      "message": "frame_00012.png is very similar to its previous frame"
+    },
+    {
+      "frame": 12,
+      "type": "near-duplicate",
+      "value": 0.0016439156681190997,
+      "message": "frame_00013.png is very similar to its previous frame"
+    },
+    {
+      "frame": 13,
+      "type": "near-duplicate",
+      "value": 0.002489844317356572,
+      "message": "frame_00014.png is very similar to its previous frame"
+    },
+    {
+      "frame": 14,
+      "type": "near-duplicate",
+      "value": 0.001651858660130719,
+      "message": "frame_00015.png is very similar to its previous frame"
+    },
+    {
+      "frame": 15,
+      "type": "near-duplicate",
+      "value": 0.001501367329339143,
+      "message": "frame_00016.png is very similar to its previous frame"
+    },
+    {
+      "frame": 16,
+      "type": "near-duplicate",
+      "value": 0.001893978077342048,
+      "message": "frame_00017.png is very similar to its previous frame"
+    },
+    {
+      "frame": 17,
+      "type": "near-duplicate",
+      "value": 0.0038462520424836603,
+      "message": "frame_00018.png is very similar to its previous frame"
+    },
+    {
+      "frame": 18,
+      "type": "near-duplicate",
+      "value": 0.003242726488743646,
+      "message": "frame_00019.png is very similar to its previous frame"
+    },
+    {
+      "frame": 19,
+      "type": "near-duplicate",
+      "value": 0.00195894040486565,
+      "message": "frame_00020.png is very similar to its previous frame"
+    },
+    {
+      "frame": 20,
+      "type": "near-duplicate",
+      "value": 0.0019701456971677562,
+      "message": "frame_00021.png is very similar to its previous frame"
+    },
+    {
+      "frame": 21,
+      "type": "near-duplicate",
+      "value": 0.0020545399872912125,
+      "message": "frame_00022.png is very similar to its previous frame"
+    },
+    {
+      "frame": 23,
+      "type": "near-duplicate",
+      "value": 0.002078510802469136,
+      "message": "frame_00024.png is very similar to its previous frame"
+    },
+    {
+      "frame": 24,
+      "type": "near-duplicate",
+      "value": 0.0017458980119825706,
+      "message": "frame_00025.png is very similar to its previous frame"
+    },
+    {
+      "frame": 25,
+      "type": "near-duplicate",
+      "value": 0.001874404275599129,
+      "message": "frame_00026.png is very similar to its previous frame"
+    },
+    {
+      "frame": 26,
+      "type": "near-duplicate",
+      "value": 0.002760331563180828,
+      "message": "frame_00027.png is very similar to its previous frame"
+    },
+    {
+      "frame": 27,
+      "type": "near-duplicate",
+      "value": 0.0021070204702251273,
+      "message": "frame_00028.png is very similar to its previous frame"
+    },
+    {
+      "frame": 28,
+      "type": "near-duplicate",
+      "value": 0.0016273204883805374,
+      "message": "frame_00029.png is very similar to its previous frame"
+    },
+    {
+      "frame": 29,
+      "type": "near-duplicate",
+      "value": 0.0019648976488743646,
+      "message": "frame_00030.png is very similar to its previous frame"
+    },
+    {
+      "frame": 30,
+      "type": "near-duplicate",
+      "value": 0.0028763559822076977,
+      "message": "frame_00031.png is very similar to its previous frame"
+    },
+    {
+      "frame": 31,
+      "type": "near-duplicate",
+      "value": 0.0017541246822803194,
+      "message": "frame_00032.png is very similar to its previous frame"
+    },
+    {
+      "frame": 32,
+      "type": "near-duplicate",
+      "value": 0.0014651983478576618,
+      "message": "frame_00033.png is very similar to its previous frame"
+    },
+    {
+      "frame": 33,
+      "type": "near-duplicate",
+      "value": 0.001641078885257807,
+      "message": "frame_00034.png is very similar to its previous frame"
+    },
+    {
+      "frame": 34,
+      "type": "near-duplicate",
+      "value": 0.0037729212055192447,
+      "message": "frame_00035.png is very similar to its previous frame"
+    },
+    {
+      "frame": 35,
+      "type": "near-duplicate",
+      "value": 0.002809266067538127,
+      "message": "frame_00036.png is very similar to its previous frame"
+    },
+    {
+      "frame": 36,
+      "type": "near-duplicate",
+      "value": 0.001350875998547567,
+      "message": "frame_00037.png is very similar to its previous frame"
+    },
+    {
+      "frame": 37,
+      "type": "near-duplicate",
+      "value": 0.0011464857933914307,
+      "message": "frame_00038.png is very similar to its previous frame"
+    },
+    {
+      "frame": 38,
+      "type": "near-duplicate",
+      "value": 0.0010703181735657226,
+      "message": "frame_00039.png is very similar to its previous frame"
+    },
+    {
+      "frame": 39,
+      "type": "near-duplicate",
+      "value": 0.0029814587872185913,
+      "message": "frame_00040.png is very similar to its previous frame"
+    },
+    {
+      "frame": 40,
+      "type": "near-duplicate",
+      "value": 0.0010976931281771968,
+      "message": "frame_00041.png is very similar to its previous frame"
+    },
+    {
+      "frame": 41,
+      "type": "near-duplicate",
+      "value": 0.0008633748638344226,
+      "message": "frame_00042.png is very similar to its previous frame"
+    },
+    {
+      "frame": 42,
+      "type": "near-duplicate",
+      "value": 0.0008779842955700799,
+      "message": "frame_00043.png is very similar to its previous frame"
+    },
+    {
+      "frame": 43,
+      "type": "near-duplicate",
+      "value": 0.0015556917211328974,
+      "message": "frame_00044.png is very similar to its previous frame"
+    },
+    {
+      "frame": 44,
+      "type": "near-duplicate",
+      "value": 0.0013405217411038488,
+      "message": "frame_00045.png is very similar to its previous frame"
+    },
+    {
+      "frame": 45,
+      "type": "near-duplicate",
+      "value": 0.001132018200798838,
+      "message": "frame_00046.png is very similar to its previous frame"
+    },
+    {
+      "frame": 46,
+      "type": "near-duplicate",
+      "value": 0.0018383771332607117,
+      "message": "frame_00047.png is very similar to its previous frame"
+    },
+    {
+      "frame": 47,
+      "type": "near-duplicate",
+      "value": 0.0033197451434277413,
+      "message": "frame_00048.png is very similar to its previous frame"
+    },
+    {
+      "frame": 48,
+      "type": "near-duplicate",
+      "value": 0.0022202081063907044,
+      "message": "frame_00049.png is very similar to its previous frame"
+    },
+    {
+      "frame": 49,
+      "type": "near-duplicate",
+      "value": 0.0012626520515613652,
+      "message": "frame_00050.png is very similar to its previous frame"
+    },
+    {
+      "frame": 50,
+      "type": "near-duplicate",
+      "value": 0.001733132489106754,
+      "message": "frame_00051.png is very similar to its previous frame"
+    },
+    {
+      "frame": 53,
+      "type": "near-duplicate",
+      "value": 0.0030745052650689906,
+      "message": "frame_00054.png is very similar to its previous frame"
+    },
+    {
+      "frame": 54,
+      "type": "near-duplicate",
+      "value": 0.002838626770152505,
+      "message": "frame_00055.png is very similar to its previous frame"
+    },
+    {
+      "frame": 55,
+      "type": "near-duplicate",
+      "value": 0.0029435877360203338,
+      "message": "frame_00056.png is very similar to its previous frame"
+    },
+    {
+      "frame": 57,
+      "type": "near-duplicate",
+      "value": 0.0029648636074800293,
+      "message": "frame_00058.png is very similar to its previous frame"
+    },
+    {
+      "frame": 58,
+      "type": "near-duplicate",
+      "value": 0.0028279888344226577,
+      "message": "frame_00059.png is very similar to its previous frame"
+    },
+    {
+      "frame": 59,
+      "type": "near-duplicate",
+      "value": 0.0029135178376906317,
+      "message": "frame_00060.png is very similar to its previous frame"
+    },
+    {
+      "frame": 60,
+      "type": "near-duplicate",
+      "value": 0.0037940552378358753,
+      "message": "frame_00061.png is very similar to its previous frame"
+    },
+    {
+      "frame": 61,
+      "type": "near-duplicate",
+      "value": 0.0032052809549745825,
+      "message": "frame_00062.png is very similar to its previous frame"
+    },
+    {
+      "frame": 62,
+      "type": "near-duplicate",
+      "value": 0.0027519630537400147,
+      "message": "frame_00063.png is very similar to its previous frame"
+    },
+    {
+      "frame": 63,
+      "type": "near-duplicate",
+      "value": 0.0030455700798838053,
+      "message": "frame_00064.png is very similar to its previous frame"
+    },
+    {
+      "frame": 64,
+      "type": "near-duplicate",
+      "value": 0.003695051515976761,
+      "message": "frame_00065.png is very similar to its previous frame"
+    },
+    {
+      "frame": 65,
+      "type": "near-duplicate",
+      "value": 0.0027241625816993467,
+      "message": "frame_00066.png is very similar to its previous frame"
+    },
+    {
+      "frame": 66,
+      "type": "near-duplicate",
+      "value": 0.002346728622004357,
+      "message": "frame_00067.png is very similar to its previous frame"
+    },
+    {
+      "frame": 67,
+      "type": "near-duplicate",
+      "value": 0.0024912627087872188,
+      "message": "frame_00068.png is very similar to its previous frame"
+    },
+    {
+      "frame": 69,
+      "type": "near-duplicate",
+      "value": 0.003617465504720407,
+      "message": "frame_00070.png is very similar to its previous frame"
+    },
+    {
+      "frame": 70,
+      "type": "near-duplicate",
+      "value": 0.0019892939814814816,
+      "message": "frame_00071.png is very similar to its previous frame"
+    },
+    {
+      "frame": 71,
+      "type": "near-duplicate",
+      "value": 0.0020426254992737835,
+      "message": "frame_00072.png is very similar to its previous frame"
+    },
+    {
+      "frame": 72,
+      "type": "near-duplicate",
+      "value": 0.0016945522421931735,
+      "message": "frame_00073.png is very similar to its previous frame"
+    },
+    {
+      "frame": 73,
+      "type": "near-duplicate",
+      "value": 0.0034340674927378365,
+      "message": "frame_00074.png is very similar to its previous frame"
+    },
+    {
+      "frame": 74,
+      "type": "near-duplicate",
+      "value": 0.0013376849582425563,
+      "message": "frame_00075.png is very similar to its previous frame"
+    },
+    {
+      "frame": 75,
+      "type": "near-duplicate",
+      "value": 0.0011992499546114742,
+      "message": "frame_00076.png is very similar to its previous frame"
+    },
+    {
+      "frame": 76,
+      "type": "near-duplicate",
+      "value": 0.0014057677469135803,
+      "message": "frame_00077.png is very similar to its previous frame"
+    },
+    {
+      "frame": 77,
+      "type": "near-duplicate",
+      "value": 0.0015629255174291938,
+      "message": "frame_00078.png is very similar to its previous frame"
+    },
+    {
+      "frame": 78,
+      "type": "near-duplicate",
+      "value": 0.0010277664306463327,
+      "message": "frame_00079.png is very similar to its previous frame"
+    },
+    {
+      "frame": 79,
+      "type": "near-duplicate",
+      "value": 0.0007925971314451706,
+      "message": "frame_00080.png is very similar to its previous frame"
+    },
+    {
+      "frame": 80,
+      "type": "near-duplicate",
+      "value": 0.001079395878721859,
+      "message": "frame_00081.png is very similar to its previous frame"
+    },
+    {
+      "frame": 81,
+      "type": "near-duplicate",
+      "value": 0.0015179625090777052,
+      "message": "frame_00082.png is very similar to its previous frame"
+    },
+    {
+      "frame": 82,
+      "type": "near-duplicate",
+      "value": 0.0008708923384168481,
+      "message": "frame_00083.png is very similar to its previous frame"
+    },
+    {
+      "frame": 83,
+      "type": "near-duplicate",
+      "value": 0.0007406840050835148,
+      "message": "frame_00084.png is very similar to its previous frame"
+    },
+    {
+      "frame": 84,
+      "type": "near-duplicate",
+      "value": 0.0010320216049382715,
+      "message": "frame_00085.png is very similar to its previous frame"
+    },
+    {
+      "frame": 85,
+      "type": "near-duplicate",
+      "value": 0.002912950481118373,
+      "message": "frame_00086.png is very similar to its previous frame"
+    },
+    {
+      "frame": 86,
+      "type": "near-duplicate",
+      "value": 0.0022996380265068992,
+      "message": "frame_00087.png is very similar to its previous frame"
+    },
+    {
+      "frame": 87,
+      "type": "near-duplicate",
+      "value": 0.001385342910312273,
+      "message": "frame_00088.png is very similar to its previous frame"
+    },
+    {
+      "frame": 88,
+      "type": "near-duplicate",
+      "value": 0.0014413693718228033,
+      "message": "frame_00089.png is very similar to its previous frame"
+    },
+    {
+      "frame": 89,
+      "type": "near-duplicate",
+      "value": 0.0016566811909949166,
+      "message": "frame_00090.png is very similar to its previous frame"
+    },
+    {
+      "frame": 90,
+      "type": "near-duplicate",
+      "value": 0.003520022013435004,
+      "message": "frame_00091.png is very similar to its previous frame"
+    },
+    {
+      "frame": 91,
+      "type": "near-duplicate",
+      "value": 0.0017559685911401595,
+      "message": "frame_00092.png is very similar to its previous frame"
+    },
+    {
+      "frame": 92,
+      "type": "near-duplicate",
+      "value": 0.0016381002632534494,
+      "message": "frame_00093.png is very similar to its previous frame"
+    },
+    {
+      "frame": 93,
+      "type": "near-duplicate",
+      "value": 0.0017948325163398694,
+      "message": "frame_00094.png is very similar to its previous frame"
+    },
+    {
+      "frame": 94,
+      "type": "near-duplicate",
+      "value": 0.002580479529774873,
+      "message": "frame_00095.png is very similar to its previous frame"
+    },
+    {
+      "frame": 95,
+      "type": "near-duplicate",
+      "value": 0.002147586465141612,
+      "message": "frame_00096.png is very similar to its previous frame"
+    },
+    {
+      "frame": 96,
+      "type": "near-duplicate",
+      "value": 0.0024311229121278142,
+      "message": "frame_00097.png is very similar to its previous frame"
+    },
+    {
+      "frame": 97,
+      "type": "near-duplicate",
+      "value": 0.0020092933006535946,
+      "message": "frame_00098.png is very similar to its previous frame"
+    },
+    {
+      "frame": 98,
+      "type": "near-duplicate",
+      "value": 0.002768700072621641,
+      "message": "frame_00099.png is very similar to its previous frame"
+    },
+    {
+      "frame": 99,
+      "type": "near-duplicate",
+      "value": 0.0027946566358024692,
+      "message": "frame_00100.png is very similar to its previous frame"
+    },
+    {
+      "frame": 100,
+      "type": "near-duplicate",
+      "value": 0.0033410210148874363,
+      "message": "frame_00101.png is very similar to its previous frame"
+    },
+    {
+      "frame": 101,
+      "type": "near-duplicate",
+      "value": 0.0024603417755991288,
+      "message": "frame_00102.png is very similar to its previous frame"
+    },
+    {
+      "frame": 103,
+      "type": "near-duplicate",
+      "value": 0.0036700878267973856,
+      "message": "frame_00104.png is very similar to its previous frame"
+    },
+    {
+      "frame": 104,
+      "type": "near-duplicate",
+      "value": 0.002180634985475672,
+      "message": "frame_00105.png is very similar to its previous frame"
+    },
+    {
+      "frame": 105,
+      "type": "near-duplicate",
+      "value": 0.0021999251089324617,
+      "message": "frame_00106.png is very similar to its previous frame"
+    },
+    {
+      "frame": 106,
+      "type": "near-duplicate",
+      "value": 0.0019931236383442267,
+      "message": "frame_00107.png is very similar to its previous frame"
+    },
+    {
+      "frame": 108,
+      "type": "near-duplicate",
+      "value": 0.001633277732389252,
+      "message": "frame_00109.png is very similar to its previous frame"
+    },
+    {
+      "frame": 109,
+      "type": "near-duplicate",
+      "value": 0.001222227895787945,
+      "message": "frame_00110.png is very similar to its previous frame"
+    },
+    {
+      "frame": 110,
+      "type": "near-duplicate",
+      "value": 0.0012210931826434276,
+      "message": "frame_00111.png is very similar to its previous frame"
+    },
+    {
+      "frame": 111,
+      "type": "near-duplicate",
+      "value": 0.0016829214324618734,
+      "message": "frame_00112.png is very similar to its previous frame"
+    },
+    {
+      "frame": 112,
+      "type": "near-duplicate",
+      "value": 0.0010076252723311549,
+      "message": "frame_00113.png is very similar to its previous frame"
+    },
+    {
+      "frame": 113,
+      "type": "near-duplicate",
+      "value": 0.0006469283315177923,
+      "message": "frame_00114.png is very similar to its previous frame"
+    },
+    {
+      "frame": 114,
+      "type": "near-duplicate",
+      "value": 0.0009303229393609295,
+      "message": "frame_00115.png is very similar to its previous frame"
+    },
+    {
+      "frame": 115,
+      "type": "near-duplicate",
+      "value": 0.001491864106753813,
+      "message": "frame_00116.png is very similar to its previous frame"
+    },
+    {
+      "frame": 116,
+      "type": "near-duplicate",
+      "value": 0.0006368577523602033,
+      "message": "frame_00117.png is very similar to its previous frame"
+    },
+    {
+      "frame": 117,
+      "type": "near-duplicate",
+      "value": 0.0006320352214960059,
+      "message": "frame_00118.png is very similar to its previous frame"
+    },
+    {
+      "frame": 118,
+      "type": "near-duplicate",
+      "value": 0.00090308982389252,
+      "message": "frame_00119.png is very similar to its previous frame"
+    },
+    {
+      "frame": 119,
+      "type": "near-duplicate",
+      "value": 0.0024976454702251272,
+      "message": "frame_00120.png is very similar to its previous frame"
+    },
+    {
+      "frame": 120,
+      "type": "near-duplicate",
+      "value": 0.0015935627723311545,
+      "message": "frame_00121.png is very similar to its previous frame"
+    },
+    {
+      "frame": 121,
+      "type": "near-duplicate",
+      "value": 0.000815291394335512,
+      "message": "frame_00122.png is very similar to its previous frame"
+    },
+    {
+      "frame": 122,
+      "type": "near-duplicate",
+      "value": 0.0005467898965141613,
+      "message": "frame_00123.png is very similar to its previous frame"
+    },
+    {
+      "frame": 123,
+      "type": "near-duplicate",
+      "value": 0.0007385564179375454,
+      "message": "frame_00124.png is very similar to its previous frame"
+    }
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "file": "frame_00001.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5732315894565291,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0
+    },
+    {
+      "index": 1,
+      "file": "frame_00002.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5736724055670445,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001419384304647785
+    },
+    {
+      "index": 2,
+      "file": "frame_00003.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5736574060776655,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.000906210285039942
+    },
+    {
+      "index": 3,
+      "file": "frame_00004.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5737826677708844,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0005884906045751634
+    },
+    {
+      "index": 4,
+      "file": "frame_00005.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5734761888425075,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0005626758805374002
+    },
+    {
+      "index": 5,
+      "file": "frame_00006.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5751799672777097,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002099644834785766
+    },
+    {
+      "index": 6,
+      "file": "frame_00007.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5750308633110363,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0007134508896151053
+    },
+    {
+      "index": 7,
+      "file": "frame_00008.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5751828461690666,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0006409710875090777
+    },
+    {
+      "index": 8,
+      "file": "frame_00009.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5751192579082415,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0007450810185185186
+    },
+    {
+      "index": 9,
+      "file": "frame_00010.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5752638008599708,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0016500147512708788
+    },
+    {
+      "index": 10,
+      "file": "frame_00011.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5750292144309981,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0012857718318809005
+    },
+    {
+      "index": 11,
+      "file": "frame_00012.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5751151689516952,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0011940019063180827
+    },
+    {
+      "index": 12,
+      "file": "frame_00013.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.574600080103656,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0016439156681190997
+    },
+    {
+      "index": 13,
+      "file": "frame_00014.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5752360956861043,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002489844317356572
+    },
+    {
+      "index": 14,
+      "file": "frame_00015.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5751950664977362,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001651858660130719
+    },
+    {
+      "index": 15,
+      "file": "frame_00016.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.575221102845435,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001501367329339143
+    },
+    {
+      "index": 16,
+      "file": "frame_00017.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5749248363353587,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001893978077342048
+    },
+    {
+      "index": 17,
+      "file": "frame_00018.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5729881735409007,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0038462520424836603
+    },
+    {
+      "index": 18,
+      "file": "frame_00019.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5741530873417074,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.003242726488743646
+    },
+    {
+      "index": 19,
+      "file": "frame_00020.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5740210240183312,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.00195894040486565
+    },
+    {
+      "index": 20,
+      "file": "frame_00021.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5741623689406318,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0019701456971677562
+    },
+    {
+      "index": 21,
+      "file": "frame_00022.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5739409868493839,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0020545399872912125
+    },
+    {
+      "index": 22,
+      "file": "frame_00023.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5759045968647876,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.004109363652868556
+    },
+    {
+      "index": 23,
+      "file": "frame_00024.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5759865887544254,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002078510802469136
+    },
+    {
+      "index": 24,
+      "file": "frame_00025.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5758509085329011,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0017458980119825706
+    },
+    {
+      "index": 25,
+      "file": "frame_00026.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5759011129408361,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001874404275599129
+    },
+    {
+      "index": 26,
+      "file": "frame_00027.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5758627099928514,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002760331563180828
+    },
+    {
+      "index": 27,
+      "file": "frame_00028.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5755266044134667,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0021070204702251273
+    },
+    {
+      "index": 28,
+      "file": "frame_00029.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5755222029675585,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0016273204883805374
+    },
+    {
+      "index": 29,
+      "file": "frame_00030.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.575109982958027,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0019648976488743646
+    },
+    {
+      "index": 30,
+      "file": "frame_00031.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.575653707799309,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0028763559822076977
+    },
+    {
+      "index": 31,
+      "file": "frame_00032.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5756328308504391,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0017541246822803194
+    },
+    {
+      "index": 32,
+      "file": "frame_00033.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5756417002293538,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0014651983478576618
+    },
+    {
+      "index": 33,
+      "file": "frame_00034.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5752817789713541,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001641078885257807
+    },
+    {
+      "index": 34,
+      "file": "frame_00035.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5727673632386983,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0037729212055192447
+    },
+    {
+      "index": 35,
+      "file": "frame_00036.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5740500323393246,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002809266067538127
+    },
+    {
+      "index": 36,
+      "file": "frame_00037.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5738026936848958,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001350875998547567
+    },
+    {
+      "index": 37,
+      "file": "frame_00038.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5738737550955713,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0011464857933914307
+    },
+    {
+      "index": 38,
+      "file": "frame_00039.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5736091297955814,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0010703181735657226
+    },
+    {
+      "index": 39,
+      "file": "frame_00040.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754189086116217,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0029814587872185913
+    },
+    {
+      "index": 40,
+      "file": "frame_00041.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.575410431506587,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0010976931281771968
+    },
+    {
+      "index": 41,
+      "file": "frame_00042.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754069076903765,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0008633748638344226
+    },
+    {
+      "index": 42,
+      "file": "frame_00043.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754146667347495,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0008779842955700799
+    },
+    {
+      "index": 43,
+      "file": "frame_00044.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5752984938278697,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0015556917211328974
+    },
+    {
+      "index": 44,
+      "file": "frame_00045.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5747810513365502,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0013405217411038488
+    },
+    {
+      "index": 45,
+      "file": "frame_00046.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5750453840933074,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001132018200798838
+    },
+    {
+      "index": 46,
+      "file": "frame_00047.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5746521727451831,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0018383771332607117
+    },
+    {
+      "index": 47,
+      "file": "frame_00048.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5753394964213985,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0033197451434277413
+    },
+    {
+      "index": 48,
+      "file": "frame_00049.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5750564010054977,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0022202081063907044
+    },
+    {
+      "index": 49,
+      "file": "frame_00050.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5748988332312092,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0012626520515613652
+    },
+    {
+      "index": 50,
+      "file": "frame_00051.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5746920849502996,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001733132489106754
+    },
+    {
+      "index": 51,
+      "file": "frame_00052.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5723793777765013,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.004287797294843863
+    },
+    {
+      "index": 52,
+      "file": "frame_00053.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5732096487140863,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.005026353712781409
+    },
+    {
+      "index": 53,
+      "file": "frame_00054.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5732877910007319,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0030745052650689906
+    },
+    {
+      "index": 54,
+      "file": "frame_00055.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5732989741306679,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002838626770152505
+    },
+    {
+      "index": 55,
+      "file": "frame_00056.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5729458013131468,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0029435877360203338
+    },
+    {
+      "index": 56,
+      "file": "frame_00057.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5745272501361656,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.004838842365649964
+    },
+    {
+      "index": 57,
+      "file": "frame_00058.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5746250194142327,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0029648636074800293
+    },
+    {
+      "index": 58,
+      "file": "frame_00059.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5745765104273046,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0028279888344226577
+    },
+    {
+      "index": 59,
+      "file": "frame_00060.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5744973309419255,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0029135178376906317
+    },
+    {
+      "index": 60,
+      "file": "frame_00061.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5743940232885689,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0037940552378358753
+    },
+    {
+      "index": 61,
+      "file": "frame_00062.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5741739111008987,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0032052809549745825
+    },
+    {
+      "index": 62,
+      "file": "frame_00063.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5742669730924053,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0027519630537400147
+    },
+    {
+      "index": 63,
+      "file": "frame_00064.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5738164365681168,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0030455700798838053
+    },
+    {
+      "index": 64,
+      "file": "frame_00065.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5742618203422862,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.003695051515976761
+    },
+    {
+      "index": 65,
+      "file": "frame_00066.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5743957652505447,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0027241625816993467
+    },
+    {
+      "index": 66,
+      "file": "frame_00067.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.574425405198972,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002346728622004357
+    },
+    {
+      "index": 67,
+      "file": "frame_00068.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5741195512493191,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0024912627087872188
+    },
+    {
+      "index": 68,
+      "file": "frame_00069.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5720511309721371,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.004358149509803922
+    },
+    {
+      "index": 69,
+      "file": "frame_00070.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5735895825886779,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.003617465504720407
+    },
+    {
+      "index": 70,
+      "file": "frame_00071.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5736038241251362,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0019892939814814816
+    },
+    {
+      "index": 71,
+      "file": "frame_00072.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.573887311814917,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0020426254992737835
+    },
+    {
+      "index": 72,
+      "file": "frame_00073.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5736895126974401,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0016945522421931735
+    },
+    {
+      "index": 73,
+      "file": "frame_00074.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5756037826371868,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0034340674927378365
+    },
+    {
+      "index": 74,
+      "file": "frame_00075.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5756398784828601,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0013376849582425563
+    },
+    {
+      "index": 75,
+      "file": "frame_00076.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.575650828907952,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0011992499546114742
+    },
+    {
+      "index": 76,
+      "file": "frame_00077.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5756531626051028,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0014057677469135803
+    },
+    {
+      "index": 77,
+      "file": "frame_00078.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5755864428019472,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0015629255174291938
+    },
+    {
+      "index": 78,
+      "file": "frame_00079.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5753202816499864,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0010277664306463327
+    },
+    {
+      "index": 79,
+      "file": "frame_00080.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754369864536526,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0007925971314451706
+    },
+    {
+      "index": 80,
+      "file": "frame_00081.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5750042618230018,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001079395878721859
+    },
+    {
+      "index": 81,
+      "file": "frame_00082.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754614603545412,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0015179625090777052
+    },
+    {
+      "index": 82,
+      "file": "frame_00083.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754386020901416,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0008708923384168481
+    },
+    {
+      "index": 83,
+      "file": "frame_00084.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754863331780194,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0007406840050835148
+    },
+    {
+      "index": 84,
+      "file": "frame_00085.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5751356802215244,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0010320216049382715
+    },
+    {
+      "index": 85,
+      "file": "frame_00086.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5729402895326968,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002912950481118373
+    },
+    {
+      "index": 86,
+      "file": "frame_00087.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5740325661785982,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0022996380265068992
+    },
+    {
+      "index": 87,
+      "file": "frame_00088.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5738377789266749,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001385342910312273
+    },
+    {
+      "index": 88,
+      "file": "frame_00089.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.573906287232775,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0014413693718228033
+    },
+    {
+      "index": 89,
+      "file": "frame_00090.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5735198908122277,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0016566811909949166
+    },
+    {
+      "index": 90,
+      "file": "frame_00091.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754721049389807,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.003520022013435004
+    },
+    {
+      "index": 91,
+      "file": "frame_00092.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754248126659518,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0017559685911401595
+    },
+    {
+      "index": 92,
+      "file": "frame_00093.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754377510552833,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0016381002632534494
+    },
+    {
+      "index": 93,
+      "file": "frame_00094.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5754139686202172,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0017948325163398694
+    },
+    {
+      "index": 94,
+      "file": "frame_00095.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5753396160981754,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002580479529774873
+    },
+    {
+      "index": 95,
+      "file": "frame_00096.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5751074165560321,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002147586465141612
+    },
+    {
+      "index": 96,
+      "file": "frame_00097.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.575188304759838,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0024311229121278142
+    },
+    {
+      "index": 97,
+      "file": "frame_00098.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5752669722945603,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0020092933006535946
+    },
+    {
+      "index": 98,
+      "file": "frame_00099.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5752710413049769,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002768700072621641
+    },
+    {
+      "index": 99,
+      "file": "frame_00100.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5752514076648454,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0027946566358024692
+    },
+    {
+      "index": 100,
+      "file": "frame_00101.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5753587510850695,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0033410210148874363
+    },
+    {
+      "index": 101,
+      "file": "frame_00102.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5749316845064849,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0024603417755991288
+    },
+    {
+      "index": 102,
+      "file": "frame_00103.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5731980001744622,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.004104824800290487
+    },
+    {
+      "index": 103,
+      "file": "frame_00104.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5744202590975627,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0036700878267973856
+    },
+    {
+      "index": 104,
+      "file": "frame_00105.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5742161038134872,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.002180634985475672
+    },
+    {
+      "index": 105,
+      "file": "frame_00106.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5743688512731481,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0021999251089324617
+    },
+    {
+      "index": 106,
+      "file": "frame_00107.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5740453449988937,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0019931236383442267
+    },
+    {
+      "index": 107,
+      "file": "frame_00108.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5761414571525224,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.00437431917211329
+    },
+    {
+      "index": 108,
+      "file": "frame_00109.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5759213383161425,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001633277732389252
+    },
+    {
+      "index": 109,
+      "file": "frame_00110.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5758629227515658,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001222227895787945
+    },
+    {
+      "index": 110,
+      "file": "frame_00111.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5757857179330065,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0012210931826434276
+    },
+    {
+      "index": 111,
+      "file": "frame_00112.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5757126685580916,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0016829214324618734
+    },
+    {
+      "index": 112,
+      "file": "frame_00113.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.575283673853656,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0010076252723311549
+    },
+    {
+      "index": 113,
+      "file": "frame_00114.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.575385698306015,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0006469283315177923
+    },
+    {
+      "index": 114,
+      "file": "frame_00115.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5749939031330848,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0009303229393609295
+    },
+    {
+      "index": 115,
+      "file": "frame_00116.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5757432526233149,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.001491864106753813
+    },
+    {
+      "index": 116,
+      "file": "frame_00117.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5755623611749388,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0006368577523602033
+    },
+    {
+      "index": 117,
+      "file": "frame_00118.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5755058271952445,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0006320352214960059
+    },
+    {
+      "index": 118,
+      "file": "frame_00119.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5752452310134123,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.00090308982389252
+    },
+    {
+      "index": 119,
+      "file": "frame_00120.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5731409608928207,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0024976454702251272
+    },
+    {
+      "index": 120,
+      "file": "frame_00121.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5741459333299292,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0015935627723311545
+    },
+    {
+      "index": 121,
+      "file": "frame_00122.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5737308011854916,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.000815291394335512
+    },
+    {
+      "index": 122,
+      "file": "frame_00123.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5738740941797726,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0005467898965141613
+    },
+    {
+      "index": 123,
+      "file": "frame_00124.png",
+      "width": 768,
+      "height": 768,
+      "bbox": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "luminance": 0.5734038309334151,
+      "subjectWidthRatio": 1.0,
+      "subjectHeightRatio": 1.0,
+      "centerX": 0.5,
+      "centerY": 0.5,
+      "occupancy": 1.0,
+      "differenceFromPrevious": 0.0007385564179375454
+    }
+  ]
+}

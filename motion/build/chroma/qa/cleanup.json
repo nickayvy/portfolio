@@ -1,0 +1,357 @@
+{
+  "source": "/Users/nick/Documents/GitHub/portfolio/motion/build/chroma/frame-preparation/frames",
+  "output": "/Users/nick/Documents/GitHub/portfolio/motion/build/chroma/frames/final",
+  "inputFrameCount": 124,
+  "outputFrameCount": 66,
+  "seamWindow": 40,
+  "endReference": "/Users/nick/Documents/GitHub/portfolio/motion/build/chroma/frame-preparation/frames/frame_00001.png",
+  "seamSourceIndex": 119,
+  "seamDifference": 0.00171194,
+  "duplicateThreshold": 0.003,
+  "keptSourceIndices": [
+    0,
+    5,
+    10,
+    12,
+    13,
+    15,
+    17,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    35,
+    38,
+    39,
+    43,
+    46,
+    47,
+    49,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    71,
+    73,
+    76,
+    79,
+    83,
+    85,
+    87,
+    89,
+    90,
+    92,
+    94,
+    96,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    107,
+    109,
+    111,
+    119
+  ],
+  "droppedNearDuplicates": [
+    {
+      "index": 1,
+      "file": "frame_00002.png",
+      "difference": 0.00166933
+    },
+    {
+      "index": 2,
+      "file": "frame_00003.png",
+      "difference": 0.00206419
+    },
+    {
+      "index": 3,
+      "file": "frame_00004.png",
+      "difference": 0.00222782
+    },
+    {
+      "index": 4,
+      "file": "frame_00005.png",
+      "difference": 0.00212195
+    },
+    {
+      "index": 6,
+      "file": "frame_00007.png",
+      "difference": 0.00089542
+    },
+    {
+      "index": 7,
+      "file": "frame_00008.png",
+      "difference": 0.00107167
+    },
+    {
+      "index": 8,
+      "file": "frame_00009.png",
+      "difference": 0.00158484
+    },
+    {
+      "index": 9,
+      "file": "frame_00010.png",
+      "difference": 0.00279142
+    },
+    {
+      "index": 11,
+      "file": "frame_00012.png",
+      "difference": 0.00169526
+    },
+    {
+      "index": 14,
+      "file": "frame_00015.png",
+      "difference": 0.00225766
+    },
+    {
+      "index": 16,
+      "file": "frame_00017.png",
+      "difference": 0.0026068
+    },
+    {
+      "index": 19,
+      "file": "frame_00020.png",
+      "difference": 0.00276118
+    },
+    {
+      "index": 21,
+      "file": "frame_00022.png",
+      "difference": 0.00291644
+    },
+    {
+      "index": 23,
+      "file": "frame_00024.png",
+      "difference": 0.00290352
+    },
+    {
+      "index": 25,
+      "file": "frame_00026.png",
+      "difference": 0.00271922
+    },
+    {
+      "index": 27,
+      "file": "frame_00028.png",
+      "difference": 0.0029044
+    },
+    {
+      "index": 29,
+      "file": "frame_00030.png",
+      "difference": 0.00268706
+    },
+    {
+      "index": 31,
+      "file": "frame_00032.png",
+      "difference": 0.00243431
+    },
+    {
+      "index": 33,
+      "file": "frame_00034.png",
+      "difference": 0.00225726
+    },
+    {
+      "index": 36,
+      "file": "frame_00037.png",
+      "difference": 0.0018226
+    },
+    {
+      "index": 37,
+      "file": "frame_00038.png",
+      "difference": 0.00291102
+    },
+    {
+      "index": 40,
+      "file": "frame_00041.png",
+      "difference": 0.00136814
+    },
+    {
+      "index": 41,
+      "file": "frame_00042.png",
+      "difference": 0.00182124
+    },
+    {
+      "index": 42,
+      "file": "frame_00043.png",
+      "difference": 0.00257824
+    },
+    {
+      "index": 44,
+      "file": "frame_00045.png",
+      "difference": 0.00161755
+    },
+    {
+      "index": 45,
+      "file": "frame_00046.png",
+      "difference": 0.0023163
+    },
+    {
+      "index": 48,
+      "file": "frame_00049.png",
+      "difference": 0.0029111
+    },
+    {
+      "index": 50,
+      "file": "frame_00051.png",
+      "difference": 0.00243997
+    },
+    {
+      "index": 70,
+      "file": "frame_00071.png",
+      "difference": 0.00280147
+    },
+    {
+      "index": 72,
+      "file": "frame_00073.png",
+      "difference": 0.00241779
+    },
+    {
+      "index": 74,
+      "file": "frame_00075.png",
+      "difference": 0.0018826
+    },
+    {
+      "index": 75,
+      "file": "frame_00076.png",
+      "difference": 0.00299719
+    },
+    {
+      "index": 77,
+      "file": "frame_00078.png",
+      "difference": 0.00203195
+    },
+    {
+      "index": 78,
+      "file": "frame_00079.png",
+      "difference": 0.00289466
+    },
+    {
+      "index": 80,
+      "file": "frame_00081.png",
+      "difference": 0.00135626
+    },
+    {
+      "index": 81,
+      "file": "frame_00082.png",
+      "difference": 0.00221625
+    },
+    {
+      "index": 82,
+      "file": "frame_00083.png",
+      "difference": 0.00267956
+    },
+    {
+      "index": 84,
+      "file": "frame_00085.png",
+      "difference": 0.00136974
+    },
+    {
+      "index": 86,
+      "file": "frame_00087.png",
+      "difference": 0.00291142
+    },
+    {
+      "index": 88,
+      "file": "frame_00089.png",
+      "difference": 0.00197754
+    },
+    {
+      "index": 91,
+      "file": "frame_00092.png",
+      "difference": 0.00243606
+    },
+    {
+      "index": 93,
+      "file": "frame_00094.png",
+      "difference": 0.00249973
+    },
+    {
+      "index": 95,
+      "file": "frame_00096.png",
+      "difference": 0.00295873
+    },
+    {
+      "index": 97,
+      "file": "frame_00098.png",
+      "difference": 0.00286347
+    },
+    {
+      "index": 106,
+      "file": "frame_00107.png",
+      "difference": 0.00282102
+    },
+    {
+      "index": 108,
+      "file": "frame_00109.png",
+      "difference": 0.00231918
+    },
+    {
+      "index": 110,
+      "file": "frame_00111.png",
+      "difference": 0.00170723
+    },
+    {
+      "index": 112,
+      "file": "frame_00113.png",
+      "difference": 0.00122844
+    },
+    {
+      "index": 113,
+      "file": "frame_00114.png",
+      "difference": 0.00128732
+    },
+    {
+      "index": 114,
+      "file": "frame_00115.png",
+      "difference": 0.00193286
+    },
+    {
+      "index": 115,
+      "file": "frame_00116.png",
+      "difference": 0.00171218
+    },
+    {
+      "index": 116,
+      "file": "frame_00117.png",
+      "difference": 0.00190238
+    },
+    {
+      "index": 117,
+      "file": "frame_00118.png",
+      "difference": 0.00197977
+    },
+    {
+      "index": 118,
+      "file": "frame_00119.png",
+      "difference": 0.00230649
+    }
+  ],
+  "trimmedTailSourceIndices": [
+    120,
+    121,
+    122,
+    123
+  ]
+}

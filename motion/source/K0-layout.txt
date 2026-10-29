@@ -1,0 +1,12 @@
+Image 1 is the approved character sheet. Keep the stick-figure person almost exactly: same curly dark hair, round head, small round glasses, smile, white t-shirt, thin even black ink lines, crossed stick legs, oval feet, and the left arm extended straight left with a flat oval palm. Keep the two cats' markings, colors, outlines, and cartoon style from image 1.
+
+Rearrange only the layout, from left to right on one invisible ground line:
+1. The tuxedo cat (black-and-white) is now SLEEPING to the LEFT of the person's body, tucked under the extended left arm near the person's left foot. Eyes fully closed, peaceful sleeping face, loafed or curled. Do not cover or touch the palm. The palm stays the leftmost point of the whole group.
+2. The stick-figure person in the middle, still leaning left with the palm pressed to an invisible wall.
+3. The seal-point cat stays sitting to the RIGHT of the person, in the same spot a small dog would sit at the person's right feet, facing the viewer.
+
+Glasses: draw the round frames, but the lenses must be empty white ovals with NO pupils, NO black dots, NO highlights inside the glasses. The eye sockets are blank white so pupils can be added later.
+
+The sleeping tuxedo cat has closed eyes (simple curved closed-eye lines). The siamese keeps its blue eyes.
+
+Fully transparent background. No floor, glow, shadow, text, letters, or extra objects. Generous padding on all sides. Do not restyle anyone into a different art style.
