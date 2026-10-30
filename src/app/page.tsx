@@ -1,4 +1,6 @@
 import { HeroCharacters } from "@/components/hero-characters";
+import { ScrollRoll } from "@/components/scroll-roll";
+import { SectionTabs } from "@/components/section-tabs";
 
 const links = [
   {
@@ -74,22 +76,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <nav
-        aria-label="Sections"
-        className="relative z-20 flex gap-6 px-6 pt-5 text-sm text-[#3a3a3a] sm:px-8"
-      >
-        {sections.map(({ id, label }) => (
-          <a
-            key={id}
-            href={`#${id}`}
-            className="transition-colors duration-500 ease-[cubic-bezier(.19,1,.22,1)] hover:text-foreground"
-          >
-            {label}
-          </a>
-        ))}
-      </nav>
-
-      <section className="relative z-[1] flex flex-1 items-start px-6 pt-[9vh] pb-32 sm:px-8">
+      <section data-roll className="relative z-[1] flex flex-1 items-start px-6 pt-[9vh] pb-32 sm:px-8">
         <h1 className="relative text-[clamp(4.5rem,17vw,15rem)] font-bold leading-[0.86] tracking-[-0.05em]">
           <span className={lineMask}>
             <span className={`${lineLift} [animation-delay:.1s]`}>Nick</span>
@@ -110,25 +97,16 @@ export default function Home() {
         </h1>
       </section>
 
-      {sections.map(({ id, label, body }) => (
-        <section
-          key={id}
-          id={id}
-          className="relative z-[1] scroll-mt-8 border-t border-[#ece9e1] px-6 py-24 sm:px-8"
-        >
-          <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-none tracking-[-0.04em]">
-            {label}
-          </h2>
-          <p className="mt-6 max-w-xl text-lg text-[#3a3a3a]">{body}</p>
-        </section>
-      ))}
+      <div data-roll className="relative z-20">
+        <footer className="flex animate-fadeup flex-wrap items-baseline gap-x-6 gap-y-1 px-6 pb-6 in-[.is-booting]:[animation-play-state:paused] motion-reduce:animate-none sm:px-8">
+          <span className="text-xs tracking-[0.25em] text-[#9a9a9a]">
+            ENGINEER / SAN DIEGO
+          </span>
+        </footer>
+      </div>
 
-      <footer className="relative z-20 flex animate-fadeup flex-wrap items-baseline gap-x-6 gap-y-1 px-6 pb-6 in-[.is-booting]:[animation-play-state:paused] motion-reduce:animate-none sm:px-8">
-        <span className="text-lg font-bold">nickayy</span>
-        <span className="text-xs tracking-[0.25em] text-[#9a9a9a]">
-          SOFTWARE ENGINEER / SDSU CS / SAN DIEGO
-        </span>
-      </footer>
+      <SectionTabs sections={sections} />
+      <ScrollRoll />
     </main>
   );
 }

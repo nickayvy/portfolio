@@ -85,3 +85,29 @@ html.has-cursor-fx,
 html.has-cursor-fx * {
   cursor: none !important;
 }
+
+[data-roll] {
+  --roll-y: 0px;
+  --roll-angle: 0deg;
+  --roll-angle-mobile: 0deg;
+  --roll-opacity: 1;
+  --roll-origin-y: 50%;
+  transform: perspective(900px) translate3d(0, var(--roll-y), 0) rotateX(var(--roll-angle));
+  transform-origin: 50% var(--roll-origin-y);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  opacity: var(--roll-opacity);
+}
+
+@media (max-width: 760px) {
+  [data-roll] {
+    transform: perspective(900px) translate3d(0, var(--roll-y), 0) rotateX(var(--roll-angle-mobile));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-roll] {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
