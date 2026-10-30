@@ -3,25 +3,30 @@
 import { useEffect, useRef } from "react";
 
 const LENSES = [
-  { left: "39.2%", top: "21.35%" },
-  { left: "43.4%", top: "21.5%" },
+  { left: "42.01%", top: "21.58%" },
+  { left: "49.93%", top: "23.09%" },
+] as const;
+
+const CAT_IRISES = [
+  { left: "62.99%", top: "65.82%" },
+  { left: "67.97%", top: "66.16%" },
 ] as const;
 
 export function HeroCharacters() {
   const rootRef = useRef<HTMLSpanElement>(null);
-  const siameseRef = useRef<HTMLImageElement>(null);
+  const siameseHeadRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const root = rootRef.current;
-    const siamese = siameseRef.current;
+    const siameseHead = siameseHeadRef.current;
     if (!root) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const pupils = [...root.querySelectorAll<HTMLElement>("[data-eye]")];
 
     const onPointer = (event: PointerEvent) => {
       const box = root.getBoundingClientRect();
-      const originX = box.left + box.width * 0.41;
-      const originY = box.top + box.height * 0.21;
+      const originX = box.left + box.width * 0.46;
+      const originY = box.top + box.height * 0.224;
       const dx = event.clientX - originX;
       const dy = event.clientY - originY;
       const dist = Math.hypot(dx, dy) || 1;
@@ -34,16 +39,18 @@ export function HeroCharacters() {
         pupil.style.setProperty("--look-y", lookY.toFixed(3));
       }
 
-      if (siamese) {
-        const catX = box.left + box.width * 0.696;
-        const catY = box.top + box.height * 0.72;
+      if (siameseHead) {
+        const catX = box.left + box.width * 0.654;
+        const catY = box.top + box.height * 0.654;
         const cx = event.clientX - catX;
         const cy = event.clientY - catY;
         const cd = Math.hypot(cx, cy) || 1;
         const ct = Math.min(1, cd / 220);
-        const yaw = (cx / cd) * ct * 12;
-        const pitch = (cy / cd) * ct * 6;
-        siamese.style.transform = `rotate(${yaw.toFixed(2)}deg) translateY(${(pitch * 0.4).toFixed(2)}px)`;
+        const nx = (cx / cd) * ct;
+        const ny = (cy / cd) * ct;
+        siameseHead.style.transform = `translate(${(nx * 0.4).toFixed(3)}%, ${(ny * 0.25).toFixed(3)}%) rotate(${(nx * 7).toFixed(2)}deg)`;
+        siameseHead.style.setProperty("--cat-look-x", nx.toFixed(3));
+        siameseHead.style.setProperty("--cat-look-y", ny.toFixed(3));
       }
     };
 
@@ -59,33 +66,65 @@ export function HeroCharacters() {
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/hero-base.png?v=3"
+        src="/hero-base.png?v=6"
         alt=""
         width={1024}
         height={1024}
         className="block aspect-square h-auto w-full select-none drop-shadow-[0_10px_18px_rgba(0,0,0,0.08)]"
       />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        ref={siameseRef}
-        src="/hero-siamese.png?v=3"
-        alt=""
-        width={1024}
-        height={1024}
-        className="absolute inset-0 h-full w-full origin-[69.63%_93.07%] select-none drop-shadow-[0_10px_18px_rgba(0,0,0,0.08)]"
-      />
+      <span className="absolute inset-0 drop-shadow-[0_10px_18px_rgba(0,0,0,0.08)]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/hero-siamese-body.png?v=1"
+          alt=""
+          width={1024}
+          height={1024}
+          className="absolute inset-0 h-full w-full select-none"
+        />
+        <span
+          ref={siameseHeadRef}
+          className="absolute inset-0 origin-[65.43%_72.07%] transition-transform duration-150 ease-out"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero-siamese-head.png?v=2"
+            alt=""
+            width={1024}
+            height={1024}
+            className="absolute inset-0 h-full w-full select-none"
+          />
+          {CAT_IRISES.map((iris) => (
+            <span
+              key={iris.left}
+              className="absolute aspect-square w-[1.6%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full"
+              style={{ top: iris.top, left: iris.left }}
+            >
+              <span
+                className="absolute h-[67%] w-[55%] rounded-full bg-[#111]"
+                style={{
+                  left: "calc(50% + var(--cat-look-x, 0) * 21%)",
+                  top: "calc(50% + var(--cat-look-y, 0) * 15%)",
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                <span className="absolute top-[14%] right-[16%] aspect-square w-[30%] rounded-full bg-white" />
+              </span>
+            </span>
+          ))}
+        </span>
+      </span>
       {LENSES.map((lens) => (
         <span
           key={lens.left}
-          className="absolute aspect-square w-[2.45%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full"
+          className="absolute aspect-square w-[4.7%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full"
           style={{ top: lens.top, left: lens.left }}
         >
           <span
             data-eye
-            className="absolute aspect-square w-[38%] rounded-full bg-[#111]"
+            className="absolute aspect-square w-[30%] rounded-full bg-[#111]"
             style={{
-              left: "calc(50% + var(--look-x, 0) * 16%)",
-              top: "calc(50% + var(--look-y, 0) * 16%)",
+              left: "calc(50% + var(--look-x, 0) * 26%)",
+              top: "calc(50% + var(--look-y, 0) * 26%)",
               transform: "translate(-50%, -50%)",
             }}
           />
