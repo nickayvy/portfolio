@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { CursorFx } from "@/components/cursor-fx";
+import { SiteLoader } from "@/components/site-loader";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,8 +16,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full font-sans">{children}</body>
+    <html lang="en" className={`${inter.variable} is-booting h-full antialiased [&.is-booting]:overflow-hidden`}>
+      <body className="min-h-full font-sans">
+        <SiteLoader />
+        {children}
+        <CursorFx />
+      </body>
     </html>
   );
 }

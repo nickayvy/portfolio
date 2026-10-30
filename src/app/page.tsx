@@ -8,6 +8,10 @@ const links = [
   { label: "Resume", href: "/resume.pdf" },
 ];
 
+const lineMask = "-mb-[.2em] block overflow-hidden pb-[.2em]";
+const lineLift =
+  "block animate-lift in-[.is-booting]:[animation-play-state:paused] motion-reduce:animate-none";
+
 function GitHubIcon() {
   return (
     <svg viewBox="0 0 16 16" aria-hidden className="size-4 fill-current">
@@ -26,7 +30,7 @@ export default function Home() {
 
       <header className="relative z-20 flex items-center justify-between px-6 pt-6 text-sm sm:px-8 sm:pt-7">
         <span className="flex items-center gap-2 font-medium tracking-wide">
-          <span className="size-2 rounded-full border-[1.5px] border-current" />
+          <span className="size-[7px] animate-pulse-dot rounded-full border-[1.5px] border-foreground bg-[#ffe28a] motion-reduce:animate-none" />
           NICK
         </span>
         <nav
@@ -39,7 +43,7 @@ export default function Home() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-foreground"
+              className="transition-colors duration-500 ease-[cubic-bezier(.19,1,.22,1)] hover:text-foreground"
             >
               {label}
             </a>
@@ -48,7 +52,7 @@ export default function Home() {
             href="https://github.com/nickayvy"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 transition-colors hover:text-foreground"
+            className="flex items-center gap-1.5 transition-colors duration-500 ease-[cubic-bezier(.19,1,.22,1)] hover:text-foreground"
           >
             <GitHubIcon />
             github.com/nickayvy
@@ -58,16 +62,26 @@ export default function Home() {
 
       <section className="relative z-[1] flex flex-1 items-start px-6 pt-[9vh] pb-32 sm:px-8">
         <h1 className="relative text-[clamp(4.5rem,17vw,15rem)] font-bold leading-[0.86] tracking-[-0.05em]">
-          <span className="block">Nick</span>
+          <span className={lineMask}>
+            <span className={`${lineLift} [animation-delay:.1s]`}>Nick</span>
+          </span>
           <span className="relative z-[2] inline-block">
-            makes
+            <span className={lineMask}>
+              <span className={`${lineLift} [animation-delay:.24s]`}>
+                makes
+              </span>
+            </span>
             <HeroCharacters />
           </span>
-          <span className="block">things.</span>
+          <span className={lineMask}>
+            <span className={`${lineLift} [animation-delay:.38s]`}>
+              things.
+            </span>
+          </span>
         </h1>
       </section>
 
-      <footer className="relative z-20 flex flex-wrap items-baseline gap-x-6 gap-y-1 px-6 pb-6 sm:px-8">
+      <footer className="relative z-20 flex animate-fadeup flex-wrap items-baseline gap-x-6 gap-y-1 px-6 pb-6 in-[.is-booting]:[animation-play-state:paused] motion-reduce:animate-none sm:px-8">
         <span className="text-lg font-bold">nickayy</span>
         <span className="text-xs tracking-[0.25em] text-[#9a9a9a]">
           SOFTWARE ENGINEER / SDSU CS / SAN DIEGO

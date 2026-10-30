@@ -62,7 +62,7 @@ export function HeroCharacters() {
     <span
       ref={rootRef}
       aria-hidden
-      className="pointer-events-none absolute top-1/2 left-full z-[2] w-[min(42vw,22rem)] -translate-x-[16%] -translate-y-[30%]"
+      className="pointer-events-none absolute top-[0.62em] left-[calc(100%-0.02em)] z-[2] w-[min(42vw,22rem)] -translate-x-[14.4%] -translate-y-[30.7%] animate-hero-enter in-[.is-booting]:[animation-play-state:paused] motion-reduce:animate-none"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
