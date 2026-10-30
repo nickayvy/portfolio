@@ -1,0 +1,18 @@
+subject_count: 1
+subjects:
+  - identity: >-
+      Seal-point siamese from ../source/siamese/P0-center.png: cream body, dark
+      seal-brown mask, ears, legs and tail, blue eyes, red collar, pink bear tag,
+      thick black cartoon outline.
+style: matches the hero art ("make the transition a lot more seamless")
+motion_intent: head and eyes follow the cursor in every direction ("all 360 degrees")
+background_owner: page
+scene: null
+driver: pointer
+input_semantics: continuous
+time_control: scrub
+navigation: none
+clip_continuity: independent
+continuity: [body, collar, paws and tail stay still; only head and eyes move]
+aspect_ratio: "1:1"
+destination: hero, right of Nick, about 95x130 CSS px, desktop and mobile

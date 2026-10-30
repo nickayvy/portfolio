@@ -1,27 +1,36 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { createCssSpriteRenderer, createFrameAnimator } from "@/lib/interactive-motion";
 
 const LENSES = [
   { left: "42.01%", top: "21.58%" },
   { left: "49.93%", top: "23.09%" },
 ] as const;
 
-const CAT_IRISES = [
-  { left: "62.99%", top: "65.82%" },
-  { left: "67.97%", top: "66.16%" },
-] as const;
+const GAZE_FRAMES = 48;
+const GAZE_COLUMNS = 8;
+const GAZE_ROWS = 6;
+const GAZE_DEAD_ZONE = 24;
 
 export function HeroCharacters() {
   const rootRef = useRef<HTMLSpanElement>(null);
-  const siameseHeadRef = useRef<HTMLSpanElement>(null);
+  const siameseRef = useRef<HTMLSpanElement>(null);
+  const gazeRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const root = rootRef.current;
-    const siameseHead = siameseHeadRef.current;
-    if (!root) return;
+    const siamese = siameseRef.current;
+    const gaze = gazeRef.current;
+    if (!root || !siamese || !gaze) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const pupils = [...root.querySelectorAll<HTMLElement>("[data-eye]")];
+    const animator = createFrameAnimator({
+      frameCount: GAZE_FRAMES,
+      circular: true,
+      smoothTime: 0.14,
+      render: createCssSpriteRenderer(gaze, GAZE_COLUMNS, GAZE_ROWS),
+    });
 
     const onPointer = (event: PointerEvent) => {
       const box = root.getBoundingClientRect();
@@ -39,23 +48,21 @@ export function HeroCharacters() {
         pupil.style.setProperty("--look-y", lookY.toFixed(3));
       }
 
-      if (siameseHead) {
-        const catX = box.left + box.width * 0.654;
-        const catY = box.top + box.height * 0.654;
-        const cx = event.clientX - catX;
-        const cy = event.clientY - catY;
-        const cd = Math.hypot(cx, cy) || 1;
-        const ct = Math.min(1, cd / 220);
-        const nx = (cx / cd) * ct;
-        const ny = (cy / cd) * ct;
-        siameseHead.style.transform = `translate(${(nx * 0.4).toFixed(3)}%, ${(ny * 0.25).toFixed(3)}%) rotate(${(nx * 7).toFixed(2)}deg)`;
-        siameseHead.style.setProperty("--cat-look-x", nx.toFixed(3));
-        siameseHead.style.setProperty("--cat-look-y", ny.toFixed(3));
-      }
+      const cx = event.clientX - (box.left + box.width * 0.697);
+      const cy = event.clientY - (box.top + box.height * 0.716);
+      if (Math.hypot(cx, cy) < GAZE_DEAD_ZONE) return;
+      animator.setDirection(cx, cy, 0);
+      siamese.dataset.tracking = "";
     };
+    const onLeave = () => delete siamese.dataset.tracking;
 
     window.addEventListener("pointermove", onPointer, { passive: true });
-    return () => window.removeEventListener("pointermove", onPointer);
+    document.documentElement.addEventListener("mouseleave", onLeave);
+    return () => {
+      animator.destroy();
+      window.removeEventListener("pointermove", onPointer);
+      document.documentElement.removeEventListener("mouseleave", onLeave);
+    };
   }, []);
 
   return (
@@ -72,46 +79,22 @@ export function HeroCharacters() {
         height={1024}
         className="block aspect-square h-auto w-full select-none drop-shadow-[0_10px_18px_rgba(0,0,0,0.08)]"
       />
-      <span className="absolute inset-0 drop-shadow-[0_10px_18px_rgba(0,0,0,0.08)]">
+      <span
+        ref={siameseRef}
+        className="group/siamese absolute top-[57.04%] left-[56.52%] aspect-[300/415] w-[26.33%] drop-shadow-[0_10px_18px_rgba(0,0,0,0.08)]"
+      >
+        <span
+          ref={gazeRef}
+          className="absolute inset-0 bg-[url(/hero-siamese-gaze.webp?v=2)] bg-size-[800%_600%] bg-no-repeat opacity-0 transition-opacity duration-200 group-data-tracking/siamese:opacity-100"
+        />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/hero-siamese-body.png?v=1"
+          src="/hero-siamese-front.png?v=1"
           alt=""
-          width={1024}
-          height={1024}
-          className="absolute inset-0 h-full w-full select-none"
+          width={300}
+          height={415}
+          className="absolute inset-0 h-full w-full select-none transition-opacity duration-200 group-data-tracking/siamese:opacity-0"
         />
-        <span
-          ref={siameseHeadRef}
-          className="absolute inset-0 origin-[65.43%_72.07%] transition-transform duration-150 ease-out"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/hero-siamese-head.png?v=2"
-            alt=""
-            width={1024}
-            height={1024}
-            className="absolute inset-0 h-full w-full select-none"
-          />
-          {CAT_IRISES.map((iris) => (
-            <span
-              key={iris.left}
-              className="absolute aspect-square w-[1.6%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full"
-              style={{ top: iris.top, left: iris.left }}
-            >
-              <span
-                className="absolute h-[67%] w-[55%] rounded-full bg-[#111]"
-                style={{
-                  left: "calc(50% + var(--cat-look-x, 0) * 21%)",
-                  top: "calc(50% + var(--cat-look-y, 0) * 15%)",
-                  transform: "translate(-50%, -50%)",
-                }}
-              >
-                <span className="absolute top-[14%] right-[16%] aspect-square w-[30%] rounded-full bg-white" />
-              </span>
-            </span>
-          ))}
-        </span>
       </span>
       {LENSES.map((lens) => (
         <span

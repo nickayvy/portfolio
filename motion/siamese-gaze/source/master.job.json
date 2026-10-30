@@ -1,0 +1,52 @@
+{
+  "payload": {
+    "model": "minimax/minimax-h3-max",
+    "content": [
+      {
+        "type": "text",
+        "text": "Flat 2D cartoon animation of the seal-point siamese cat in the supplied frame, keeping its exact design, colors, thick black outline and flat cartoon style.\n\nCreate one continuous clockwise head and gaze rotation cycle. The face and eyes of the cat remain oriented toward the camera at all times; do not rotate around to show the back of the head. An invisible target moves smoothly clockwise in a circle on the front screen plane, starting at 3 o'clock (looking right, as in the first frame), then 6 o'clock looking down, 9 o'clock looking left, 12 o'clock looking up, and returning cleanly to 3 o'clock. The cat follows the target smoothly within a natural cone of vision, tilting and turning its head without leaving the front-facing half-sphere. Pass through every intermediate angle at a constant rate without pausing or snapping. End exactly at the first frame pose for a seamless loop. Keep the body, collar, tag, paws and tail completely stationary. No blinking, idle sway, or deformation. Locked camera, fixed scale.\n\nThe entire background is one perfectly uniform flat chroma-key #00FF00 rectangle in every frame. No gradient, texture, noise, floor plane, horizon, shadow, reflection, glow, particles, color variation, or lighting falloff on the background. Keep the subject fully separated from all image borders with generous padding. No cast shadow. No green object or reflected spill on the subject. No text, subtitle, watermark, border, or UI."
+      },
+      {
+        "type": "image_url",
+        "role": "first_frame",
+        "image_url": {
+          "url": "<local-image-data-uri>"
+        }
+      },
+      {
+        "type": "image_url",
+        "role": "last_frame",
+        "image_url": {
+          "url": "<local-image-data-uri>"
+        }
+      }
+    ],
+    "resolution": "480P",
+    "generate_audio": false,
+    "watermark": false,
+    "return_last_frame": true,
+    "duration": 5,
+    "ratio": "1:1"
+  },
+  "submit": {
+    "id": "b8b15e1ec10549f29492ad1299dca803",
+    "status": "queued",
+    "model": "minimax/minimax-h3-max"
+  },
+  "final": {
+    "id": "b8b15e1ec10549f29492ad1299dca803",
+    "status": "succeeded",
+    "content": {
+      "video_url": "<remote-url-redacted>"
+    },
+    "model": "minimax/minimax-h3-max"
+  },
+  "productionGate": {
+    "stage": "pilot",
+    "segmentIndex": 1
+  },
+  "lastFrame": {
+    "path": "/Users/nick/Documents/GitHub/portfolio/motion/siamese-gaze/source/master-last-frame.jpg",
+    "source": "video-fallback"
+  }
+}

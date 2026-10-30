@@ -8,6 +8,24 @@ const links = [
   { label: "Resume", href: "/resume.pdf" },
 ];
 
+const sections = [
+  {
+    id: "about",
+    label: "About",
+    body: "A short intro about who you are and what you like to build goes here.",
+  },
+  {
+    id: "work",
+    label: "Work",
+    body: "Selected projects will go here.",
+  },
+  {
+    id: "contact",
+    label: "Contact",
+    body: "How to reach you will go here.",
+  },
+];
+
 const lineMask = "-mb-[.2em] block overflow-hidden pb-[.2em]";
 const lineLift =
   "block animate-lift in-[.is-booting]:[animation-play-state:paused] motion-reduce:animate-none";
@@ -28,11 +46,7 @@ export default function Home() {
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ece9e1_1px,transparent_1px),linear-gradient(to_bottom,#ece9e1_1px,transparent_1px)] bg-size-[48px_48px]"
       />
 
-      <header className="relative z-20 flex items-center justify-between px-6 pt-6 text-sm sm:px-8 sm:pt-7">
-        <span className="flex items-center gap-2 font-medium tracking-wide">
-          <span className="size-[7px] animate-pulse-dot rounded-full border-[1.5px] border-foreground bg-[#ffe28a] motion-reduce:animate-none" />
-          NICK
-        </span>
+      <header className="relative z-20 flex items-center justify-end px-6 pt-6 text-sm sm:px-8 sm:pt-7">
         <nav
           className="flex items-center gap-5 text-[#3a3a3a]"
           aria-label="Profiles"
@@ -60,6 +74,21 @@ export default function Home() {
         </nav>
       </header>
 
+      <nav
+        aria-label="Sections"
+        className="relative z-20 flex gap-6 px-6 pt-5 text-sm text-[#3a3a3a] sm:px-8"
+      >
+        {sections.map(({ id, label }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className="transition-colors duration-500 ease-[cubic-bezier(.19,1,.22,1)] hover:text-foreground"
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
+
       <section className="relative z-[1] flex flex-1 items-start px-6 pt-[9vh] pb-32 sm:px-8">
         <h1 className="relative text-[clamp(4.5rem,17vw,15rem)] font-bold leading-[0.86] tracking-[-0.05em]">
           <span className={lineMask}>
@@ -80,6 +109,19 @@ export default function Home() {
           </span>
         </h1>
       </section>
+
+      {sections.map(({ id, label, body }) => (
+        <section
+          key={id}
+          id={id}
+          className="relative z-[1] scroll-mt-8 border-t border-[#ece9e1] px-6 py-24 sm:px-8"
+        >
+          <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-none tracking-[-0.04em]">
+            {label}
+          </h2>
+          <p className="mt-6 max-w-xl text-lg text-[#3a3a3a]">{body}</p>
+        </section>
+      ))}
 
       <footer className="relative z-20 flex animate-fadeup flex-wrap items-baseline gap-x-6 gap-y-1 px-6 pb-6 in-[.is-booting]:[animation-play-state:paused] motion-reduce:animate-none sm:px-8">
         <span className="text-lg font-bold">nickayy</span>

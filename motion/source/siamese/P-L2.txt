@@ -1,0 +1,5 @@
+Image 1 is the approved seal-point siamese cat. Keep the picture identical: same canvas position, same size, same body, collar, pink bear tag, front paws, tail, outline weight, colors, and cartoon style. Do not move, resize, or redraw anything below the collar.
+
+Change only the head: the cat turns its head far to the viewer's LEFT (about 35 degrees, the face shows a clear three-quarter view toward the left side of the picture). Eyes, nose, mouth, whiskers, and ears turn with the head, and both eyes look in the same direction the head points. The neck stays attached at the collar exactly where it is in image 1. Whiskers and cheek fur are drawn cleanly with no gaps.
+
+One cat only. Fully transparent background. No floor, shadow, glow, text, or other objects.
