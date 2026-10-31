@@ -48,64 +48,66 @@ export default function Home() {
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ece9e1_1px,transparent_1px),linear-gradient(to_bottom,#ece9e1_1px,transparent_1px)] bg-size-[48px_48px]"
       />
 
-      <header className="relative z-20 flex items-center justify-end px-6 pt-6 text-sm sm:px-8 sm:pt-7">
-        <nav
-          className="flex items-center gap-5 text-[#3a3a3a]"
-          aria-label="Profiles"
-        >
-          {links.map(({ label, href }) => (
+      <div className="relative mx-auto flex w-full max-w-[820px] flex-1 flex-col px-8 max-[760px]:px-5">
+        <header className="relative z-20 flex items-center justify-end pt-6 text-sm sm:pt-7">
+          <nav
+            className="flex items-center gap-5 text-[#3a3a3a]"
+            aria-label="Profiles"
+          >
+            {links.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-500 ease-[cubic-bezier(.19,1,.22,1)] hover:text-foreground"
+              >
+                {label}
+              </a>
+            ))}
             <a
-              key={label}
-              href={href}
+              href="https://github.com/nickayvy"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors duration-500 ease-[cubic-bezier(.19,1,.22,1)] hover:text-foreground"
+              className="flex items-center gap-1.5 transition-colors duration-500 ease-[cubic-bezier(.19,1,.22,1)] hover:text-foreground"
             >
-              {label}
+              <GitHubIcon />
+              github.com/nickayvy
             </a>
-          ))}
-          <a
-            href="https://github.com/nickayvy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 transition-colors duration-500 ease-[cubic-bezier(.19,1,.22,1)] hover:text-foreground"
-          >
-            <GitHubIcon />
-            github.com/nickayvy
-          </a>
-        </nav>
-      </header>
+          </nav>
+        </header>
 
-      <section data-roll className="relative z-[1] flex flex-1 items-start px-6 pt-[9vh] pb-32 sm:px-8">
-        <h1 className="relative text-[clamp(4.5rem,17vw,15rem)] font-bold leading-[0.86] tracking-[-0.05em]">
-          <span className={lineMask}>
-            <span className={`${lineLift} [animation-delay:.1s]`}>Nick</span>
-          </span>
-          <span className="relative z-[2] inline-block">
+        <section data-roll className="relative z-[1] flex flex-1 items-start pt-[9vh] pb-32">
+          <h1 className="relative text-[clamp(72px,12vw,140px)] font-bold leading-[0.86] tracking-[-0.05em]">
             <span className={lineMask}>
-              <span className={`${lineLift} [animation-delay:.24s]`}>
-                makes
+              <span className={`${lineLift} [animation-delay:.1s]`}>Nick</span>
+            </span>
+            <span className="relative z-[2] inline-block">
+              <span className={lineMask}>
+                <span className={`${lineLift} [animation-delay:.24s]`}>
+                  makes
+                </span>
+              </span>
+              <HeroCharacters />
+            </span>
+            <span className={lineMask}>
+              <span className={`${lineLift} [animation-delay:.38s]`}>
+                things.
               </span>
             </span>
-            <HeroCharacters />
-          </span>
-          <span className={lineMask}>
-            <span className={`${lineLift} [animation-delay:.38s]`}>
-              things.
+          </h1>
+        </section>
+
+        <div data-roll className="relative z-20">
+          <footer className="flex animate-fadeup flex-wrap items-baseline gap-x-6 gap-y-1 pb-6 in-[.is-booting]:[animation-play-state:paused] motion-reduce:animate-none">
+            <span className="text-xs tracking-[0.25em] text-[#9a9a9a]">
+              ENGINEER / SAN DIEGO
             </span>
-          </span>
-        </h1>
-      </section>
+          </footer>
+        </div>
 
-      <div data-roll className="relative z-20">
-        <footer className="flex animate-fadeup flex-wrap items-baseline gap-x-6 gap-y-1 px-6 pb-6 in-[.is-booting]:[animation-play-state:paused] motion-reduce:animate-none sm:px-8">
-          <span className="text-xs tracking-[0.25em] text-[#9a9a9a]">
-            ENGINEER / SAN DIEGO
-          </span>
-        </footer>
+        <SectionTabs sections={sections} />
       </div>
-
-      <SectionTabs sections={sections} />
       <ScrollRoll />
     </main>
   );

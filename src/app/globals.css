@@ -29,7 +29,7 @@
 
   @keyframes lift {
     from {
-      transform: translateY(112%);
+      transform: translateY(150%);
     }
   }
 

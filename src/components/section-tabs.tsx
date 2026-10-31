@@ -18,7 +18,7 @@ export function SectionTabs({ sections }: { sections: Section[] }) {
   };
 
   return (
-    <section className="relative z-[1] px-6 pt-8 pb-24 sm:px-8">
+    <section className="relative z-[1] pt-8 pb-24">
       <div
         data-roll
         role="tablist"
