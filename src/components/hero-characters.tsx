@@ -13,6 +13,8 @@ const GAZE_COLUMNS = 12;
 const GAZE_ROWS = 8;
 const GAZE_DEAD_ZONE = 24;
 
+export const LOOK_EVENT = "hero:look";
+
 export function HeroCharacters() {
   const rootRef = useRef<HTMLSpanElement>(null);
   const siameseRef = useRef<HTMLSpanElement>(null);
@@ -32,12 +34,12 @@ export function HeroCharacters() {
       render: createCssSpriteRenderer(gaze, GAZE_COLUMNS, GAZE_ROWS),
     });
 
-    const onPointer = (event: PointerEvent) => {
+    const lookAt = (x: number, y: number) => {
       const box = root.getBoundingClientRect();
       const originX = box.left + box.width * 0.46;
       const originY = box.top + box.height * 0.224;
-      const dx = event.clientX - originX;
-      const dy = event.clientY - originY;
+      const dx = x - originX;
+      const dy = y - originY;
       const dist = Math.hypot(dx, dy) || 1;
       const t = Math.min(1, dist / 180);
       const lookX = (dx / dist) * t;
@@ -48,17 +50,24 @@ export function HeroCharacters() {
         pupil.style.setProperty("--look-y", lookY.toFixed(3));
       }
 
-      const cx = event.clientX - (box.left + box.width * 0.697);
-      const cy = event.clientY - (box.top + box.height * 0.716);
+      const cx = x - (box.left + box.width * 0.697);
+      const cy = y - (box.top + box.height * 0.716);
       if (Math.hypot(cx, cy) < GAZE_DEAD_ZONE) return;
       animator.setDirection(cx, cy, 0);
       siamese.dataset.tracking = "";
     };
+    const onPointer = (event: PointerEvent) => lookAt(event.clientX, event.clientY);
+    const onLook = (event: Event) => {
+      const { x, y } = (event as CustomEvent<{ x: number; y: number }>).detail;
+      lookAt(x, y);
+    };
 
     window.addEventListener("pointermove", onPointer, { passive: true });
+    window.addEventListener(LOOK_EVENT, onLook);
     return () => {
       animator.destroy();
       window.removeEventListener("pointermove", onPointer);
+      window.removeEventListener(LOOK_EVENT, onLook);
     };
   }, []);
 
@@ -96,12 +105,12 @@ export function HeroCharacters() {
       {LENSES.map((lens) => (
         <span
           key={lens.left}
-          className="absolute aspect-square w-[4.7%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full"
+          className="absolute aspect-square w-[4.7%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full after:absolute after:inset-x-[14%] after:top-1/2 after:h-[1.5px] after:animate-blink-lid after:rounded-[2px] after:bg-[#111] after:opacity-0 after:content-[''] motion-reduce:after:animate-none"
           style={{ top: lens.top, left: lens.left }}
         >
           <span
             data-eye
-            className="absolute aspect-square w-[30%] rounded-full bg-[#111]"
+            className="absolute aspect-square w-[30%] animate-blink-pupil rounded-full bg-[#111] motion-reduce:animate-none"
             style={{
               left: "calc(50% + var(--look-x, 0) * 26%)",
               top: "calc(50% + var(--look-y, 0) * 26%)",
