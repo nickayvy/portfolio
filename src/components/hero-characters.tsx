@@ -8,9 +8,9 @@ const LENSES = [
   { left: "49.93%", top: "23.09%" },
 ] as const;
 
-const GAZE_FRAMES = 48;
-const GAZE_COLUMNS = 8;
-const GAZE_ROWS = 6;
+const GAZE_FRAMES = 96;
+const GAZE_COLUMNS = 12;
+const GAZE_ROWS = 8;
 const GAZE_DEAD_ZONE = 24;
 
 export function HeroCharacters() {
@@ -54,14 +54,11 @@ export function HeroCharacters() {
       animator.setDirection(cx, cy, 0);
       siamese.dataset.tracking = "";
     };
-    const onLeave = () => delete siamese.dataset.tracking;
 
     window.addEventListener("pointermove", onPointer, { passive: true });
-    document.documentElement.addEventListener("mouseleave", onLeave);
     return () => {
       animator.destroy();
       window.removeEventListener("pointermove", onPointer);
-      document.documentElement.removeEventListener("mouseleave", onLeave);
     };
   }, []);
 
@@ -85,7 +82,7 @@ export function HeroCharacters() {
       >
         <span
           ref={gazeRef}
-          className="absolute inset-0 bg-[url(/hero-siamese-gaze.webp?v=2)] bg-size-[800%_600%] bg-no-repeat opacity-0 transition-opacity duration-200 group-data-tracking/siamese:opacity-100"
+          className="absolute inset-0 bg-[url(/hero-siamese-gaze.webp?v=7)] bg-size-[1200%_800%] bg-no-repeat opacity-0 transition-opacity duration-200 group-data-tracking/siamese:opacity-100"
         />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img

@@ -1,0 +1,5 @@
+Flat 2D cartoon animation of the seal-point siamese cat in the supplied frames, keeping its exact design, colors, thick black outline and flat cartoon style.
+
+Use the supplied first and last frames as the exact start and end poses. The cat's head and gaze move smoothly and continuously from looking up (first frame) to looking up and to the right (last frame), like following a target moving clockwise along a circle on the screen plane. The face stays oriented toward the camera. Constant rate, no pausing or snapping. The eyes stay wide open the entire time: no blinking, no squinting, no eyelid movement. Keep the body, collar, tag, paws and tail completely stationary. No idle sway or deformation. Locked camera, fixed scale.
+
+The entire background is one perfectly uniform flat chroma-key #00FF00 rectangle in every frame. No gradient, texture, noise, floor plane, horizon, shadow, reflection, glow, particles, color variation, or lighting falloff on the background. Keep the subject fully separated from all image borders with generous padding. No cast shadow. No green object or reflected spill on the subject. No text, subtitle, watermark, border, or UI.

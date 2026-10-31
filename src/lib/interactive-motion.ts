@@ -85,7 +85,9 @@ export function createFrameAnimator(
       : clamp(frame, 0, frameCount - 1);
 
   const render = () => {
-    const frame = Math.round(normalizeFrame(position));
+    const frame = circular
+      ? wrap(Math.round(position), frameCount)
+      : Math.round(normalizeFrame(position));
     if (frame !== lastFrame) {
       options.render(frame);
       lastFrame = frame;

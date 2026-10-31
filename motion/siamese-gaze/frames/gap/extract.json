@@ -1,0 +1,15 @@
+{
+  "source": "/Users/nick/Documents/GitHub/portfolio/motion/siamese-gaze/source/gap.mp4",
+  "frameCount": 124,
+  "fps": 24,
+  "width": 480,
+  "height": 480,
+  "interpolated": false,
+  "key": "#00EF00",
+  "transparentThreshold": 12,
+  "opaqueThreshold": 220,
+  "cutout": {
+    "transparentPixels": 20956428,
+    "partialPixels": 3403321
+  }
+}

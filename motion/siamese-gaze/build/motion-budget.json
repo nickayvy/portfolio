@@ -8,7 +8,7 @@
     "width": 280,
     "height": 280
   },
-  "frames": 48,
+  "frames": 96,
   "texture": {
     "maxSize": 4096,
     "columnsPerSheet": 14,
@@ -16,7 +16,7 @@
     "framesPerSheet": 196,
     "sheetCount": 1
   },
-  "decodedFrameMemoryMiB": 14.4,
+  "decodedFrameMemoryMiB": 28.7,
   "sourceCheck": null,
   "cellCheck": null,
   "temporalCheck": null,

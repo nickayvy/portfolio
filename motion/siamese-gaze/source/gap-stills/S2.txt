@@ -1,0 +1,5 @@
+Image 1 and image 2 are two frames of the same seal-point siamese cat animation. Image 1 looks up (12 o'clock). Image 2 looks up and to the right (about 2 o'clock). Draw the in-between frame: the exact same cat, same canvas position, same size, same body, collar, pink bear tag, paws, tail, outline weight, colors and flat cartoon style as both images.
+
+Only the head and eyes differ: the head tilts and turns so the cat looks straight up (12 o'clock), the head only just beginning to turn toward the right, halfway between image 1 and a one o'clock gaze. The face stays toward the viewer. Both eyes are wide open with round blue irises and black pupils, looking in that direction. The body below the collar is identical to image 1 and image 2.
+
+One cat only. Fully transparent background. No floor, shadow, glow, text, or other objects.
