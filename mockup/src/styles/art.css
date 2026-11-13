@@ -20,8 +20,8 @@
 .nick-squint { opacity: 0; }
 .mascot[data-poked] .mascot-body { animation: mascot-jolt 0.75s var(--ease-out) both; }
 .mascot[data-poked] .nick-squint { animation: mascot-squint 1.7s steps(1, end) both; }
-.mascot[data-poked] .nick-pupils,
-.mascot[data-poked] .nick-lids { animation: mascot-unsquint 1.7s steps(1, end) both; }
+.mascot[data-poked] .nick-pupils { animation: mascot-unsquint 1.7s steps(1, end) both; }
+.mascot[data-poked] .nick-lids { opacity: 0; }
 .mascot-dizzy { opacity: 0; pointer-events: none; }
 .mascot-star { animation: mascot-orbit 0.9s linear infinite paused; }
 .mascot[data-poked] .mascot-dizzy { animation: mascot-dizzy 1.7s var(--ease-out) both; }
@@ -134,7 +134,8 @@
 /* ---------- Footer scene ---------- */
 .footer-scene { display: block; width: 100%; height: auto; overflow: visible; }
 .mizu-tail, .mizu-head, .tux-breathe, .tux-head, .tux-z-letter, .nick-sit { transform-box: fill-box; }
-.mizu-tail { transform-origin: 0% 100%; animation: mizu-sway 2.8s ease-in-out infinite alternate; }
+.mizu-tail { transform-origin: 0% 100%; animation: mizu-sway 4.8s ease-in-out infinite; }
+.scene-mizu:hover .mizu-tail { animation-duration: 1.4s; }
 .scene-mizu .cat-ear-l { animation: ear-twitch-l 5.2s ease-in-out infinite; }
 .scene-mizu .cat-ear-r { animation: ear-twitch-r 7.3s 1.4s ease-in-out infinite; }
 .mizu-head { transform-origin: 50% 85%; transition: transform 0.55s var(--ease-spring); }
@@ -146,7 +147,20 @@
 .tux-z-letter { opacity: 0; transform-origin: 50% 50%; animation: tux-z 3.3s ease-out infinite; }
 .scene-steam { stroke-dasharray: 22 12; animation: steam-up 1.8s linear infinite; }
 
-@keyframes mizu-sway { from { transform: rotate(-7deg); } to { transform: rotate(9deg); } }
+@keyframes mizu-sway {
+  0%, 100% { transform: rotate(-5deg); }
+  22% { transform: rotate(9deg); }
+  30% { transform: rotate(6deg); }
+  38% { transform: rotate(10deg); }
+  64% { transform: rotate(-7deg); }
+  80% { transform: rotate(-3deg); }
+}
+/* Nick blinks now and then, and glances up at you on hover */
+.scene-nick .nick-lids, .scene-nick .nick-pupils { animation: scene-blink 6.2s 1.3s steps(1, end) infinite; }
+.scene-nick .nick-pupils { animation-name: scene-blink-pupils; }
+.scene-nick:hover .nick-sit { --ey: -3 !important; --ex: 1 !important; }
+@keyframes scene-blink { 0%, 100% { opacity: 0; } 95% { opacity: 1; } 97.5% { opacity: 0; } }
+@keyframes scene-blink-pupils { 0%, 100% { opacity: 1; } 95% { opacity: 0; } 97.5% { opacity: 1; } }
 @keyframes ear-twitch-l { 0%, 88%, 100% { transform: none; } 91% { transform: rotate(-16deg); } 94% { transform: rotate(4deg); } }
 @keyframes ear-twitch-r { 0%, 90%, 100% { transform: none; } 93% { transform: rotate(16deg); } 96% { transform: rotate(-3deg); } }
 @keyframes tux-breathe { 50% { transform: scale(1.025, 1.06); } }

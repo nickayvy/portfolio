@@ -37,17 +37,24 @@ export function CaseContents({ items }: { items: Item[] }) {
       .filter((el): el is HTMLElement => !!el);
     const footer = document.getElementById("contact");
     let raf = 0;
+    // A section is "current" once its top is within `reach` px of where a jump lands it
+    // (its scroll-margin-top). Reach stays below the shortest section's height, so after a
+    // jump the section jumped to is highlighted and the one below it never steals it.
+    const margins = sections.map((s) => parseFloat(getComputedStyle(s).scrollMarginTop) || 0);
 
     const update = () => {
       raf = 0;
       const vh = window.innerHeight;
-      const line = Math.min(vh * 0.35, 320);
       let idx = 0;
       const rects = sections.map((s) => s.getBoundingClientRect());
+      const shortest = Math.min(...rects.slice(0, -1).map((r) => r.height));
+      const reach = Math.max(28, Math.min(128, shortest * 0.8));
+      const lines = margins.map((m) => m + reach);
       rects.forEach((r, i) => {
-        if (r.top <= line) idx = i;
+        if (r.top <= lines[i]) idx = i;
       });
       const r = rects[idx];
+      const line = lines[idx] ?? 0;
       const read = r ? Math.min(1, Math.max(0, (line - r.top) / Math.max(1, r.height))) : 0;
 
       const writeTicks = (root: ParentNode | null) => {

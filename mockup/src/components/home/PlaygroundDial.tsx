@@ -134,7 +134,6 @@ export function PlaygroundDial() {
     wheel.addEventListener("pointermove", onMove);
     wheel.addEventListener("pointerup", onUp);
     wheel.addEventListener("pointercancel", onCancel);
-    wheel.addEventListener("lostpointercapture", onCancel);
     wheel.addEventListener("click", onClick);
     stage.addEventListener("wheel", onWheel, { passive: false });
     return () => {
@@ -143,7 +142,6 @@ export function PlaygroundDial() {
       wheel.removeEventListener("pointermove", onMove);
       wheel.removeEventListener("pointerup", onUp);
       wheel.removeEventListener("pointercancel", onCancel);
-      wheel.removeEventListener("lostpointercapture", onCancel);
       wheel.removeEventListener("click", onClick);
       stage.removeEventListener("wheel", onWheel);
     };

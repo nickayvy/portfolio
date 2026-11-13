@@ -5,10 +5,10 @@ export function ring(cx: number, cy: number, r: number, seed: number, over = 0.3
   const rand = rng(seed);
   const pts: Pt[] = [];
   const start = -2.2 + rand() * 0.4;
-  const n = 12;
+  const n = 16;
   for (let i = 0; i <= n; i++) {
     const a = start + (i / n) * (Math.PI * 2 + over);
-    const rr = r * (0.96 + rand() * 0.08);
+    const rr = r * (0.975 + rand() * 0.05);
     pts.push([cx + Math.cos(a) * rr, cy + Math.sin(a) * rr * squash]);
   }
   return smooth(pts);
@@ -71,12 +71,12 @@ export const NICK = {
 
 /** Beanie with a propeller, sitting on Nick's curls (same 400×400 box). */
 export const CAP = {
-  dome: "M114 146C108 96 148 70 206 68C264 66 304 94 302 144C252 130 162 130 114 146Z",
-  domeLine: smooth([[112, 146], [114, 108], [146, 80], [206, 68], [262, 72], [294, 96], [303, 142]]),
-  band: smooth([[108, 150], [158, 136], [208, 131], [258, 134], [308, 147]]),
-  seam: smooth([[206, 70], [201, 100], [204, 130]]),
-  stem: smooth([[206, 68], [206, 44]]),
-  bladeL: smooth([[203, 40], [176, 28], [148, 28], [144, 40], [172, 47], [203, 42]]),
-  bladeR: smooth([[209, 40], [238, 30], [266, 33], [268, 45], [240, 49], [209, 43]]),
-  blue: smooth([[124, 128], [138, 98], [170, 80]]),
+  dome: "M122 136C118 92 156 62 206 60C258 58 294 90 292 132C250 120 166 122 122 136Z",
+  domeLine: smooth([[120, 138], [124, 102], [152, 74], [206, 60], [258, 64], [286, 88], [293, 132]]),
+  band: smooth([[116, 140], [160, 126], [208, 121], [254, 123], [298, 135]]),
+  seam: smooth([[206, 62], [202, 92], [205, 120]]),
+  stem: smooth([[206, 60], [206, 42]]),
+  bladeL: "M204 38C186 24 156 20 144 30C140 40 170 46 204 42Z",
+  bladeR: "M208 38C226 24 256 20 268 30C272 40 242 46 208 42Z",
+  blue: smooth([[132, 120], [146, 92], [174, 76]]),
 };

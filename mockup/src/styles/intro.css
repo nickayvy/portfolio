@@ -1,5 +1,9 @@
 /* Intro / hero section. Owner: art engineer. */
 
+/* shadows are cast in ink on paper, but must stay dark when the ink turns light */
+:root { --intro-shadow: var(--ink); }
+html[data-theme="dark"] { --intro-shadow: var(--paper-shade); }
+
 /* ---------- Greeting ---------- */
 .greeting .hello-word {
   display: inline-block;
@@ -65,7 +69,7 @@
   color: var(--paper);
   transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
 }
-.intro-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 18px -10px color-mix(in srgb, var(--ink) 70%, transparent); }
+.intro-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 18px -10px color-mix(in srgb, var(--intro-shadow) 70%, transparent); }
 .intro-cta:active { transform: scale(0.97); }
 .intro-cta:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 3px; }
 .intro-cta-arrow { display: inline-grid; overflow: hidden; }
@@ -110,8 +114,8 @@
     repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--rl) - 1px), var(--note-rule) calc(var(--rl) - 1px), var(--note-rule) var(--rl));
   background-position: 0 0, 0 calc(var(--rl) * 0.5);
   box-shadow:
-    0 1px 1px color-mix(in srgb, var(--ink) 6%, transparent),
-    0 10px 24px -12px color-mix(in srgb, var(--ink) 30%, transparent);
+    0 1px 1px color-mix(in srgb, var(--intro-shadow) 6%, transparent),
+    0 10px 24px -12px color-mix(in srgb, var(--intro-shadow) 30%, transparent);
   rotate: -2.5deg;
   transition: rotate 0.45s var(--ease-spring), translate 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
 }
@@ -120,8 +124,8 @@
   rotate: -0.5deg;
   translate: 0 -3px;
   box-shadow:
-    0 1px 1px color-mix(in srgb, var(--ink) 6%, transparent),
-    0 18px 30px -14px color-mix(in srgb, var(--ink) 34%, transparent);
+    0 1px 1px color-mix(in srgb, var(--intro-shadow) 6%, transparent),
+    0 18px 30px -14px color-mix(in srgb, var(--intro-shadow) 34%, transparent);
 }
 .note-pin { position: absolute; top: -14px; right: -8px; width: 28px; overflow: visible; transition: translate 0.45s var(--ease-out); }
 .pinned-note:hover .note-pin { translate: 0 1px; }
@@ -159,8 +163,8 @@
   border-radius: 5px;
   background: var(--surface);
   box-shadow:
-    0 1px 2px color-mix(in srgb, var(--ink) 9%, transparent),
-    0 8px 22px -8px color-mix(in srgb, var(--ink) 28%, transparent);
+    0 1px 2px color-mix(in srgb, var(--intro-shadow) 9%, transparent),
+    0 8px 22px -8px color-mix(in srgb, var(--intro-shadow) 28%, transparent);
   rotate: var(--lean);
   transition:
     rotate 0.6s var(--ease-out),
@@ -185,14 +189,13 @@
   display: grid;
   place-items: center;
   font-family: var(--font-hand);
-  font-size: 0.78rem;
-  line-height: 1;
+  font-size: clamp(0.62rem, 0.7vw, 0.78rem);
+  line-height: 0.95;
   letter-spacing: 0;
   color: var(--ink-muted);
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-wrap: balance;
+  padding-inline: 2px;
 }
 .photo-print[data-place="1"] { translate: -5px 4px; scale: 0.96; }
 .photo-print[data-place="2"] { translate: 4px 7px; scale: 0.92; }

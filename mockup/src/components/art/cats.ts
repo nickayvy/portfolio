@@ -87,7 +87,7 @@ const CURL: Pt[] = [
 ];
 export const TUX_CURL = {
   body: smooth(CURL, true),
-  fur: hatch(CURL, { angle: -48, gap: 8, seed: 31 }),
+  fur: hatch(CURL, { angle: -48, gap: 8, seed: 31 }) + hatch(CURL, { angle: 14, gap: 12, seed: 32 }),
   tail: smooth([[588, 326], [578, 342], [544, 348], [510, 347], [488, 342]]),
   pawL: "M478 338c-2-8 14-10 20-4c3 4 0 8-5 8Z",
   pawR: "M500 340c-1-8 15-9 19-3c2 4-1 7-6 7Z",

@@ -8,7 +8,7 @@
  */
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { headerOffset, scrollToElement } from "@/lib/prefs";
+import { headerOffset, prefersReducedMotion } from "@/lib/prefs";
 
 function targetFor(hash: string) {
   if (!hash || hash === "#") return null;
@@ -16,6 +16,23 @@ function targetFor(hash: string) {
     return document.getElementById(decodeURIComponent(hash.slice(1)));
   } catch {
     return null;
+  }
+}
+
+/** Where the target's top edge should land: below the fixed header, plus any
+ *  `scroll-margin-top` the page's CSS asks for (case-study sections use it). */
+function landingTop(el: HTMLElement) {
+  if (el.id === "intro") return 0;
+  const margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+  return Math.max(headerOffset(), margin);
+}
+
+function scrollToTarget(el: HTMLElement, opts: { focus?: boolean } = {}) {
+  const top = el.getBoundingClientRect().top + window.scrollY - landingTop(el);
+  window.scrollTo({ top: Math.max(0, top), behavior: prefersReducedMotion() ? "auto" : "smooth" });
+  if (opts.focus) {
+    if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "-1");
+    el.focus({ preventScroll: true });
   }
 }
 
@@ -35,7 +52,7 @@ export function ScrollManager() {
       if (!el) return;
       e.preventDefault();
       // keyboard activation (detail 0) moves focus to the section too
-      scrollToElement(el, { focus: e.detail === 0 });
+      scrollToTarget(el, { focus: e.detail === 0 });
       if (location.hash !== url.hash) history.pushState(history.state, "", url.hash);
     };
     // capture phase so this runs before next/link's own handler
@@ -59,7 +76,7 @@ export function ScrollManager() {
     const go = () => {
       const el = targetFor(hash);
       if (el) {
-        const top = el.getBoundingClientRect().top + window.scrollY - (el.id === "intro" ? 0 : headerOffset());
+        const top = el.getBoundingClientRect().top + window.scrollY - landingTop(el);
         window.scrollTo({ top: Math.max(0, top), behavior: "instant" });
       } else if (tries++ < 30) raf = requestAnimationFrame(go);
     };

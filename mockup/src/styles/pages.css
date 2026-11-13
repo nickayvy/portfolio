@@ -26,7 +26,10 @@
 }
 
 .cs-main { min-width: 0; }
+/* landing spots used by ScrollManager: the overview keeps a gap above its back link;
+   the other sections already carry 88px of padding above their heading */
 .cs-main section[id] { scroll-margin-top: calc(var(--header-h) + 40px); }
+.cs-main .cs-section[id] { scroll-margin-top: calc(var(--header-h) + 8px); }
 
 .cs-back {
   display: inline-flex;

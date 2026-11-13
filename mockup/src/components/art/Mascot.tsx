@@ -86,8 +86,8 @@ export function MascotPropeller({ className }: { className?: string }) {
         <g className="propeller">
           <g filter="url(#crayon)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8">
             <CrayonPad x={136} y={18} w={142} h={40} />
-            <path d={CAP.bladeL} stroke="var(--accent-red)" />
-            <path d={CAP.bladeR} stroke="var(--accent-blue)" />
+            <path d={CAP.bladeL} stroke="var(--accent-red)" fill="var(--accent-red)" />
+            <path d={CAP.bladeR} stroke="var(--accent-blue)" fill="var(--accent-blue)" />
             <path d="M206 41h0.5" stroke="var(--figure-ink)" strokeWidth="14" />
           </g>
         </g>
@@ -98,9 +98,10 @@ export function MascotPropeller({ className }: { className?: string }) {
 
 /** Little crayon stars that circle the head after a poke. */
 function DizzyStars() {
-  const star = "M0 -9L0 9M-9 0L9 0M-6 -6L6 6M-6 6L6 -6";
+  const star = "M0 -15L0 15M-15 0L15 0M-10 -10L10 10M-10 10L10 -10";
   return (
-    <g className="mascot-dizzy" strokeLinecap="round" strokeWidth="5">
+    <g className="mascot-dizzy" strokeLinecap="round" strokeWidth="8" filter="url(#crayon)">
+      <CrayonPad x={50} y={0} w={300} h={96} />
       {[0, 1, 2].map((i) => (
         <g key={i} className="mascot-star" style={{ animationDelay: `${-i * 0.33}s` }}>
           <path d={star} stroke={i === 1 ? "var(--accent-blue)" : "var(--accent-red)"} />
@@ -139,18 +140,27 @@ function useMascotLife(ref: React.RefObject<SVGSVGElement | null>, enabled: bool
       }, 2600 + Math.random() * 3400);
     };
 
+    // eyes ease toward the pointer instead of snapping, like they are catching up
+    let ex = 0;
+    let ey = 0;
+    let tx = 0;
+    let ty = 0;
     const update = () => {
       raf = 0;
       const r = svg.getBoundingClientRect();
-      // eyes sit a little above the middle of the box
       const cx = r.left + r.width * 0.52;
       const cy = r.top + r.height * 0.58;
       const dx = px - cx;
       const dy = py - cy;
       const d = Math.hypot(dx, dy) || 1;
       const reach = Math.min(1, d / 260) * 7;
-      svg.style.setProperty("--ex", ((dx / d) * reach).toFixed(2));
-      svg.style.setProperty("--ey", ((dy / d) * reach * 0.8).toFixed(2));
+      tx = (dx / d) * reach;
+      ty = (dy / d) * reach * 0.8;
+      ex += (tx - ex) * 0.22;
+      ey += (ty - ey) * 0.22;
+      svg.style.setProperty("--ex", ex.toFixed(2));
+      svg.style.setProperty("--ey", ey.toFixed(2));
+      if (Math.abs(tx - ex) + Math.abs(ty - ey) > 0.05 && visible) raf = requestAnimationFrame(update);
     };
     const onMove = (e: PointerEvent) => {
       px = e.clientX;
