@@ -104,7 +104,7 @@ html[data-loader-fade] .shell-loader {
   height: 100%;
   transform: translateY(110%);
   transform-origin: 50% 100%;
-  animation: shell-mascot-pop 0.55s var(--ease-spring) 0.72s forwards;
+  animation: shell-mascot-pop 0.55s var(--ease-spring) 0.8s forwards;
 }
 .shell-loader-signature {
   display: block;

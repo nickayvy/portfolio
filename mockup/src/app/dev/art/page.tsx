@@ -1,6 +1,7 @@
 import { Mascot, MascotPropeller } from "@/components/art/Mascot";
 import { Signature } from "@/components/art/Signature";
 import { Doodle } from "@/components/art/Doodle";
+import { CatFace } from "@/components/art/Cats";
 
 const DOODLES = ["rocket", "wrench", "bowl", "cap", "terminal", "cat", "gear", "stream"] as const;
 
@@ -18,6 +19,15 @@ export default function ArtPreview() {
         <Signature className="h-7 w-auto" />
         <Signature className="w-[220px]" draw />
         <Signature className="w-[900px]" />
+      </section>
+      <section id="cats" className="flex flex-wrap items-end gap-8">
+        {(["siamese", "tuxedo", "blank"] as const).map((k) => (
+          <div key={k} className="flex items-end gap-4">
+            <CatFace kind={k} className="w-[48px]" />
+            <CatFace kind={k} className="w-[120px]" />
+            <CatFace kind={k} className="w-[320px]" />
+          </div>
+        ))}
       </section>
       <section id="doodles" className="space-y-4">
         {[16, 24, 64].map((size) => (

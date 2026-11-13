@@ -13,7 +13,7 @@ import { Signature } from "@/components/art/Signature";
 import { shellState } from "@/lib/prefs";
 
 const PEEL_MS = 560;
-const PEEL_EARLIEST = 1180; // ms after navigation start
+const PEEL_EARLIEST = 1300; // ms after navigation start
 const PEEL_LATEST = 2300; // later than this there is no time to peel: fade instead
 
 type Pt = [number, number];

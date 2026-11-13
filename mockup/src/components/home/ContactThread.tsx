@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Mascot } from "@/components/art/Mascot";
 import { contact, person } from "@/content/site";
@@ -79,9 +80,9 @@ export function ContactThread() {
           <a href={`mailto:${person.email}`} className="contact-chip home-focus" data-cursor="Say hello">
             Email {person.shortName}
           </a>
-          <a href="/resume" className="contact-chip home-focus">
+          <Link href="/resume" className="contact-chip home-focus">
             View résumé
-          </a>
+          </Link>
         </li>
       </ol>
     </div>
