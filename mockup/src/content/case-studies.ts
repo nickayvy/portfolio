@@ -52,7 +52,7 @@ export const caseStudies: CaseStudy[] = [
           "I architected and shipped the platform as a software engineer intern. It monitors ==1,200+ creator accounts==, which means the hard part is not any single account but keeping all of them current at once.",
           "It is written in TypeScript and Python, runs on serverless infrastructure and keeps its data in PostgreSQL.",
         ],
-        figure: { slide: 1, caption: `${ILLUSTRATIVE} A feed of monitored creator accounts.` },
+        figure: { slide: 1, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the account monitoring.` },
       },
       {
         id: "posts-into-traffic",
@@ -60,7 +60,7 @@ export const caseStudies: CaseStudy[] = [
         body: [
           "Every month the platform processes ==54,000 posts==. That steady flow of posts is what it uses to drive traffic back to the app.",
         ],
-        figure: { slide: 2, caption: `${ILLUSTRATIVE} Posts moving through the pipeline.` },
+        figure: { slide: 2, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the post processing.` },
       },
       {
         id: "keeping-it-cheap",
@@ -68,7 +68,7 @@ export const caseStudies: CaseStudy[] = [
         body: [
           "A platform like this only earns its place if it stays cheap enough to leave running. It brought operational costs down by ==90%==.",
         ],
-        figure: { slide: 3, caption: `${ILLUSTRATIVE} Counters for accounts, posts and cost.` },
+        figure: { slide: 3, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the cost work.` },
       },
       {
         id: "where-it-landed",
@@ -98,7 +98,7 @@ export const caseStudies: CaseStudy[] = [
           "Ingestion is event-driven: Kafka streams the simulated ticks into a sharded storage layer.",
           "The consumers are idempotent and ==commit offsets only after a successful write==. If a consumer stops between writing and committing, the message is delivered again, and because the write is idempotent, writing it twice does no harm.",
         ],
-        figure: { slide: 1, caption: `${ILLUSTRATIVE} Ticks as a tape, offsets committed after each write.` },
+        figure: { slide: 1, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the Kafka consumers.` },
       },
       {
         id: "deterministic-shards",
@@ -107,7 +107,7 @@ export const caseStudies: CaseStudy[] = [
           "Shard routing is deterministic: a key is hashed and taken ==mod N== to pick one of the in-memory shards, so the same key always lands in the same place. The distribution across shards is covered by unit tests.",
           "Keys carry a prefix for users, picks and price data, and routing uses that prefix to keep each kind of data apart.",
         ],
-        figure: { slide: 2, caption: `${ILLUSTRATIVE} Hash-mod-N routing across shards.` },
+        figure: { slide: 2, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the shard routing.` },
       },
       {
         id: "the-front-door",
@@ -115,7 +115,7 @@ export const caseStudies: CaseStudy[] = [
         body: [
           "Reads and writes go through a FastAPI service. In front of it, an Nginx API gateway handles reverse-proxy routing and enforces ==per-IP rate limiting==, so one noisy client cannot crowd out everyone else.",
         ],
-        figure: { slide: 3, caption: `${ILLUSTRATIVE} The gateway in front of the API.` },
+        figure: { slide: 3, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the gateway.` },
       },
       {
         id: "where-it-landed",
@@ -144,7 +144,7 @@ export const caseStudies: CaseStudy[] = [
           "Internal DNS runs on BIND, so every host can find every other host by name.",
           "Authentication goes through OpenLDAP, with sssd on the hosts. One directory account is ==one login across every host==.",
         ],
-        figure: { slide: 1, caption: `${ILLUSTRATIVE} Hosts, DNS and the directory.` },
+        figure: { slide: 1, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for DNS and the directory.` },
       },
       {
         id: "shared-homes-and-trust",
@@ -153,7 +153,7 @@ export const caseStudies: CaseStudy[] = [
           "Home directories are shared over NFS, so a user's files follow them from host to host.",
           "A private certificate authority issues the TLS certificates that services use to authenticate to each other.",
         ],
-        figure: { slide: 2, caption: `${ILLUSTRATIVE} A private CA and the certificates it issues.` },
+        figure: { slide: 2, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for NFS and the private CA.` },
       },
       {
         id: "mail",
@@ -189,7 +189,7 @@ export const caseStudies: CaseStudy[] = [
         body: [
           "It is a Chrome extension, built on Manifest V3 and written in TypeScript. It injects RateMyProfessors ratings ==directly into the CSUF class registration UI==, next to the classes you are already looking at.",
         ],
-        figure: { slide: 1, caption: `${ILLUSTRATIVE} Rating chips beside each class.` },
+        figure: { slide: 1, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the injected ratings.` },
       },
       {
         id: "fetching-the-ratings",
@@ -197,7 +197,7 @@ export const caseStudies: CaseStudy[] = [
         body: [
           "The ratings come from a GraphQL API, so the extension asks for what it needs and places it in the page.",
         ],
-        figure: { slide: 2, caption: `${ILLUSTRATIVE} The extension asking for ratings.` },
+        figure: { slide: 2, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the ratings lookup.` },
       },
       {
         id: "where-it-landed",
@@ -225,7 +225,7 @@ export const caseStudies: CaseStudy[] = [
         body: [
           "I rebuilt the checkout commerce APIs, the part of a storefront that has to be right every time someone pays.",
         ],
-        figure: { slide: 1, caption: `${ILLUSTRATIVE} A storefront checkout card.` },
+        figure: { slide: 1, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the checkout work.` },
       },
       {
         id: "measuring-it",
@@ -233,7 +233,7 @@ export const caseStudies: CaseStudy[] = [
         body: [
           "I instrumented PostHog analytics across both web and serverless, tracking ==GMV==, ==subscribers== and ==per-merchant conversion==. Covering both means the numbers include what happens in the browser and on the server.",
         ],
-        figure: { slide: 2, caption: `${ILLUSTRATIVE} GMV, subscribers and conversion per merchant.` },
+        figure: { slide: 2, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the analytics.` },
       },
       {
         id: "a-cleaner-catalog",
@@ -241,7 +241,7 @@ export const caseStudies: CaseStudy[] = [
         body: [
           "Product descriptions written by many hands rarely match. I built a multimodal LLM pipeline that standardizes product descriptions ==across an entire commerce catalog==.",
         ],
-        figure: { slide: 3, caption: `${ILLUSTRATIVE} Descriptions before and after the pipeline.` },
+        figure: { slide: 3, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the catalog pipeline.` },
       },
       {
         id: "where-it-landed",
