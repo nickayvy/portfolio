@@ -153,7 +153,7 @@ export type Project = {
   slides: number;
   /** palette hint for the generated cover art */
   tone: "green" | "ink" | "blue" | "red" | "paper";
-  /** résumé facts. Case study copy must not invent numbers beyond these. */
+  /** résumé facts. Case study copy must not invent numbers beyond these. `stack` lists only what the résumé names. */
   facts: string[];
   links: { label: string; href: string }[];
 };
@@ -167,7 +167,7 @@ export const projects: Project[] = [
       "An Instagram growth automation platform that watches creator accounts at scale and turns what it sees into app traffic.",
     role: "Software Engineer Intern",
     context: "Aesthetic AI",
-    stack: ["TypeScript", "Python", "Serverless", "PostgreSQL"],
+    stack: ["Instagram automation", "Data pipeline"],
     results: "1,200+ accounts monitored, 54,000 posts a month, 90% lower operating cost",
     slides: 4,
     tone: "green",
@@ -249,7 +249,7 @@ export const projects: Project[] = [
       "The launch of creator storefronts: rebuilt checkout APIs, analytics across web and serverless, and a catalog cleaned up by a multimodal LLM.",
     role: "Software Engineer Intern",
     context: "Aesthetic AI",
-    stack: ["TypeScript", "Serverless", "PostHog", "Multimodal LLMs"],
+    stack: ["Commerce APIs", "Serverless", "PostHog", "Multimodal LLMs"],
     results: "Storefront launch shipped with GMV, subscriber and per-merchant conversion tracking",
     slides: 4,
     tone: "paper",
