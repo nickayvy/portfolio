@@ -20,11 +20,13 @@ function targetFor(hash: string) {
 }
 
 /** Where the target's top edge should land: below the fixed header, plus any
- *  `scroll-margin-top` the page's CSS asks for (case-study sections use it). */
+ *  `scroll-margin-top` the page's CSS asks for (case-study sections use it). This is
+ *  the same spot the browser's own fragment jump uses (scroll-padding-top + margin),
+ *  so a hash in the URL on first load and a click on a link land identically. */
 function landingTop(el: HTMLElement) {
   if (el.id === "intro") return 0;
   const margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
-  return Math.max(headerOffset(), margin);
+  return headerOffset() + margin;
 }
 
 function scrollToTarget(el: HTMLElement, opts: { focus?: boolean } = {}) {

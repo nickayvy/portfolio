@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import { headerOffset } from "@/lib/prefs";
 import { playSound } from "@/lib/sound";
 
 type Item = { id: string; label: string };
@@ -38,9 +39,9 @@ export function CaseContents({ items }: { items: Item[] }) {
     const footer = document.getElementById("contact");
     let raf = 0;
     // A section is "current" once its top is within `reach` px of where a jump lands it
-    // (its scroll-margin-top). Reach stays below the shortest section's height, so after a
+    // (header + its scroll-margin-top). Reach stays below the shortest section's height, so after a
     // jump the section jumped to is highlighted and the one below it never steals it.
-    const margins = sections.map((s) => parseFloat(getComputedStyle(s).scrollMarginTop) || 0);
+    const margins = sections.map((s) => headerOffset() + (parseFloat(getComputedStyle(s).scrollMarginTop) || 0));
 
     const update = () => {
       raf = 0;

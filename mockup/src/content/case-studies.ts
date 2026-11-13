@@ -1,8 +1,8 @@
 /**
  * Case-study prose for /work/[slug].
  *
- * Built only from each project's `facts`, `role`, `context`, `stack` and `results` in
- * site.ts. Nothing here adds numbers, clients, dates or outcomes that are not listed
+ * Built only from each project's `facts` (plus its `role`, `context` and `results`) in
+ * site.ts. The `stack` list is not used for prose: only technologies named in `facts` appear. Nothing here adds numbers, clients, dates or outcomes that are not listed
  * there; where a section would need facts we do not have, it stays short and general.
  *
  * Inline markup: wrap a phrase in ==double equals== to render it as a marker <mark>.
@@ -42,15 +42,14 @@ export const caseStudies: CaseStudy[] = [
         title: "The problem",
         body: [
           "Aesthetic AI is a pre-seed consumer startup. It has raised ==$1.5M at a $10M valuation== and has ==100,000+ users==. At that stage, growth matters and so does every dollar the company spends keeping things running.",
-          "Creators on Instagram were a way to bring people to the app. The work was a platform that could keep watch over a large set of creator accounts, keep up with what they post, and turn that into traffic for the app without becoming expensive to run.",
+          "The work was an Instagram growth automation platform: one that watches creator accounts at scale and turns what it sees into traffic for the app, without becoming expensive to run.",
         ],
       },
       {
         id: "watching-the-accounts",
         title: "Watching the accounts",
         body: [
-          "I architected and shipped the platform as a software engineer intern. It monitors ==1,200+ creator accounts==, which means the hard part is not any single account but keeping all of them current at once.",
-          "It is written in TypeScript and Python, runs on serverless infrastructure and keeps its data in PostgreSQL.",
+          "I architected and shipped the platform as a software engineer intern. It monitors ==1,200+ creator accounts==, which is a lot of accounts to keep watching at once.",
         ],
         figure: { slide: 1, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the account monitoring.` },
       },
@@ -88,7 +87,7 @@ export const caseStudies: CaseStudy[] = [
         title: "The problem",
         body: [
           "This is a personal project about event-driven systems. Simulated stock ticks arrive as a stream, and each one has to end up stored exactly where it belongs, even when a consumer fails halfway through.",
-          "I designed and built all of it in Python, with Kafka, FastAPI, Docker and Nginx.",
+          "I designed and built all of it, with Kafka, FastAPI and Nginx at its core.",
         ],
       },
       {
@@ -134,15 +133,15 @@ export const caseStudies: CaseStudy[] = [
         id: "the-problem",
         title: "The problem",
         body: [
-          "Running one machine teaches you that machine. Running several that have to trust each other teaches you naming, identity, storage and certificates. This lab is a personal project to do exactly that across OpenBSD, FreeBSD and Linux hosts.",
+          "Running one machine teaches you that machine. Running several that have to trust each other teaches you naming, identity, storage and certificates. This lab is a personal project to do exactly that across several hosts.",
         ],
       },
       {
         id: "names-and-logins",
         title: "Names and logins",
         body: [
-          "Internal DNS runs on BIND, so every host can find every other host by name.",
-          "Authentication goes through OpenLDAP, with sssd on the hosts. One directory account is ==one login across every host==.",
+          "Internal DNS runs on BIND, so hosts can find each other by name.",
+          "Authentication goes through OpenLDAP, with sssd on the hosts. One directory account is ==one login across the lab’s hosts==.",
         ],
         figure: { slide: 1, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for DNS and the directory.` },
       },
@@ -167,7 +166,7 @@ export const caseStudies: CaseStudy[] = [
         id: "where-it-landed",
         title: "Where it landed",
         body: [
-          "One directory login works across every host, TLS is used between services, and mail works end to end.",
+          "One directory login works across the lab’s hosts, TLS is used between services, and mail works end to end.",
         ],
       },
     ],
