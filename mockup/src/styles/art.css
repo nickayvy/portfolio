@@ -125,3 +125,40 @@
 @media (prefers-reduced-motion: reduce) {
   .doodle *, .doodle:hover * { animation: none !important; transition: none !important; transform: none !important; }
 }
+
+/* ---------- Cat bits shared by portraits and the scene ---------- */
+.cat-ear { transform-box: fill-box; }
+.cat-ear-l { transform-origin: 80% 100%; }
+.cat-ear-r { transform-origin: 20% 100%; }
+
+/* ---------- Footer scene ---------- */
+.footer-scene { display: block; width: 100%; height: auto; overflow: visible; }
+.mizu-tail, .mizu-head, .tux-breathe, .tux-head, .tux-z-letter, .nick-sit { transform-box: fill-box; }
+.mizu-tail { transform-origin: 0% 100%; animation: mizu-sway 2.8s ease-in-out infinite alternate; }
+.scene-mizu .cat-ear-l { animation: ear-twitch-l 5.2s ease-in-out infinite; }
+.scene-mizu .cat-ear-r { animation: ear-twitch-r 7.3s 1.4s ease-in-out infinite; }
+.mizu-head { transform-origin: 50% 85%; transition: transform 0.55s var(--ease-spring); }
+.scene-mizu:hover .mizu-head { transform: rotate(-11deg); }
+.nick-sit { transition: translate 0.4s var(--ease-spring); }
+.scene-nick:hover .nick-sit { translate: 0 -4px; }
+.tux-breathe { transform-origin: 50% 100%; animation: tux-breathe 3.8s ease-in-out infinite; }
+.tux-head { transform-origin: 50% 100%; animation: tux-head 3.8s ease-in-out infinite; }
+.tux-z-letter { opacity: 0; transform-origin: 50% 50%; animation: tux-z 3.3s ease-out infinite; }
+.scene-steam { stroke-dasharray: 22 12; animation: steam-up 1.8s linear infinite; }
+
+@keyframes mizu-sway { from { transform: rotate(-7deg); } to { transform: rotate(9deg); } }
+@keyframes ear-twitch-l { 0%, 88%, 100% { transform: none; } 91% { transform: rotate(-16deg); } 94% { transform: rotate(4deg); } }
+@keyframes ear-twitch-r { 0%, 90%, 100% { transform: none; } 93% { transform: rotate(16deg); } 96% { transform: rotate(-3deg); } }
+@keyframes tux-breathe { 50% { transform: scale(1.025, 1.06); } }
+@keyframes tux-head { 50% { transform: translateY(-1.4px); } }
+@keyframes tux-z {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.6); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translate(14px, -34px) scale(1.25) rotate(10deg); }
+}
+@keyframes steam-up { to { stroke-dashoffset: 34; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-scene *, .footer-scene *:hover { animation: none !important; transition: none !important; }
+  .tux-z-letter:first-child { opacity: 1; }
+}

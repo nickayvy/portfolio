@@ -2,6 +2,7 @@ import { Mascot, MascotPropeller } from "@/components/art/Mascot";
 import { Signature } from "@/components/art/Signature";
 import { Doodle } from "@/components/art/Doodle";
 import { CatFace } from "@/components/art/Cats";
+import { FooterScene } from "@/components/art/FooterScene";
 
 const DOODLES = ["rocket", "wrench", "bowl", "cap", "terminal", "cat", "gear", "stream"] as const;
 
@@ -19,6 +20,10 @@ export default function ArtPreview() {
         <Signature className="h-7 w-auto" />
         <Signature className="w-[220px]" draw />
         <Signature className="w-[900px]" />
+      </section>
+      <section id="scene" className="space-y-10">
+        <FooterScene className="mx-auto max-w-[46rem]" />
+        <FooterScene className="max-w-[350px]" />
       </section>
       <section id="cats" className="flex flex-wrap items-end gap-8">
         {(["siamese", "tuxedo", "blank"] as const).map((k) => (

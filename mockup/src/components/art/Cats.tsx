@@ -1,4 +1,5 @@
 import { CAT, PINK, SIAMESE, TUXEDO } from "./cats";
+import { CrayonPad } from "./CrayonDefs";
 
 type Kind = "siamese" | "tuxedo" | "blank";
 
@@ -45,7 +46,8 @@ export function SiameseHead({ collar = true, solid = false }: { collar?: boolean
         <path d={CAT.whiskersR} strokeWidth="5" />
       </g>
       <g className="cat-eyes" filter="url(#crayon)" strokeLinecap="round">
-        <path d="M158 226h.5M242 226h.5" stroke="var(--accent-blue)" strokeWidth="26" />
+        <CrayonPad x={124} y={196} w={152} h={60} />
+        <path d="M158 226h.5M242 226h.5" stroke="var(--accent-blue)" strokeWidth="30" />
         <path d="M158 227h.5M242 227h.5" stroke="var(--figure-ink)" strokeWidth="11" />
       </g>
       {collar && (
@@ -88,6 +90,7 @@ export function TuxedoHead({ asleep = true, solid = false }: { asleep?: boolean;
           </>
         ) : (
           <>
+            <CrayonPad x={124} y={196} w={152} h={60} />
             <path d={CAT.eyeL + CAT.eyeR} fill="var(--paper)" stroke="var(--paper)" strokeWidth="12" />
             <path d={CAT.eyeL + CAT.eyeR} stroke="var(--figure-ink)" strokeWidth="7" />
             <path d="M158 226h.5M242 226h.5" stroke="var(--figure-ink)" strokeWidth="18" />

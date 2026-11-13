@@ -6,6 +6,7 @@ import { SiameseHead, TuxedoHead } from "./Cats";
 import { MIZU_BODY, TUX_CURL } from "./cats";
 import { CrayonPad } from "./CrayonDefs";
 import { NickHead } from "./NickHead";
+import { NICK } from "./nick";
 import { smooth } from "./geom";
 import { usePauseOffscreen } from "./usePauseOffscreen";
 
@@ -35,7 +36,7 @@ const S = {
   laptop: "M300 270C300 266 302 264 306 264L378 262C382 262 384 264 384 268L386 316L298 318Z",
   laptopBase: smooth([[288, 320], [340, 318], [396, 320]]),
   logo: "M335 296l1-7 4 4 4-4 1 7c-1 3-9 3-10 0Z",
-  blueNick: smooth([[402, 226], [414, 252], [414, 280]]),
+  blueNick: smooth([[398, 224], [412, 244], [418, 266]]),
   // cup
   cup: smooth([[592, 312], [594, 330], [598, 340], [618, 340], [622, 330], [624, 312]]),
   cupRim: smooth([[590, 311], [608, 314], [626, 311]]),
@@ -52,7 +53,7 @@ export function FooterScene({ className }: { className?: string }) {
   return (
     <svg
       ref={ref}
-      viewBox="20 150 620 222"
+      viewBox="20 74 620 290"
       fill="none"
       className={["footer-scene", className].filter(Boolean).join(" ")}
       data-footer-scene=""
@@ -85,7 +86,6 @@ export function FooterScene({ className }: { className?: string }) {
             <path d={MIZU_BODY.right} strokeWidth="22" />
             <path d={MIZU_BODY.legL} strokeWidth="20" />
             <path d={MIZU_BODY.legR} strokeWidth="20" />
-            <path d={MIZU_BODY.tuft} strokeWidth="14" />
             <path d={MIZU_BODY.pawL} strokeWidth="16" fill="var(--figure-ink)" fillOpacity="0.55" />
             <path d={MIZU_BODY.pawR} strokeWidth="16" fill="var(--figure-ink)" fillOpacity="0.55" />
           </g>
@@ -97,15 +97,13 @@ export function FooterScene({ className }: { className?: string }) {
 
       {/* Nick */}
       <g className="scene-nick" data-cursor="Hi!">
-        <rect x="226" y="150" width="232" height="190" fill="transparent" />
+        <rect x="226" y="84" width="232" height="256" fill="transparent" />
         <g filter="url(#crayon)" {...ink}>
           <path d={S.blueNick} stroke="var(--accent-blue)" strokeWidth="9" opacity="0.9" />
           <path d={S.teeL} strokeWidth="7" />
           <path d={S.teeR} strokeWidth="7" />
           <path d={S.sideL} strokeWidth="7" />
           <path d={S.sideR} strokeWidth="7" />
-          <path d={S.collar} strokeWidth="5" />
-          <path d={S.neck} strokeWidth="6" />
           <path d={S.armL} strokeWidth="5" />
           <path d={S.armR} strokeWidth="5" />
           <path d={S.legL} strokeWidth="7" />
@@ -118,6 +116,7 @@ export function FooterScene({ className }: { className?: string }) {
           <path d={S.logo} strokeWidth="2.5" fill="var(--figure-ink)" />
         </g>
         <g className="nick-sit" transform="translate(256 66) scale(0.42)" style={{ "--ey": 5, "--ex": -2 } as React.CSSProperties}>
+          <path d={NICK.faceFill} fill="var(--paper)" />
           <NickHead />
         </g>
       </g>

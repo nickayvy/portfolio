@@ -113,7 +113,7 @@ export const caseStudies: CaseStudy[] = [
         id: "the-front-door",
         title: "The front door",
         body: [
-          "Reads and writes go through a FastAPI service. In front of it, an Nginx API gateway handles reverse-proxy routing and enforces ==per-IP rate limiting==, so one noisy client cannot crowd out everyone else.",
+          "The API is a FastAPI service. In front of it, an Nginx API gateway handles reverse-proxy routing and enforces ==per-IP rate limiting==, so one noisy client cannot crowd out everyone else.",
         ],
         figure: { slide: 3, caption: `${ILLUSTRATIVE} Not a real screenshot; it stands in for the gateway.` },
       },

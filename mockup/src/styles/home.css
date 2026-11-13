@@ -98,6 +98,13 @@ button:focus-visible .link-arrow {
   pointer-events: none;
 }
 
+/* Registered as non-inherited so moving the rail never restyles the covers inside it. */
+@property --rail-x {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
 /* ------------------------------------------------------------------ *
  * Projects rail (#work)
  * Native scroll-snap by default (touch, < md); pinned + scroll-driven on fine pointers.

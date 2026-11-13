@@ -618,7 +618,7 @@
 .pp-flow .pp-phone:nth-child(2) .pp-tap { animation-delay: 0.4s; }
 
 /* svg-driven art helpers */
-.pp-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: pp-draw 4.8s var(--ease-in-out) infinite; }
+.pp-draw { stroke-dasharray: 1; stroke-dashoffset: 0; animation: pp-draw 4.8s var(--ease-in-out) infinite; }
 @keyframes pp-draw { 0% { stroke-dashoffset: 1; } 35%, 90% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1; } }
 .pp-dot { animation: pp-travel 2.4s var(--ease-in-out) infinite; animation-delay: calc(var(--n) * -0.6s); }
 @keyframes pp-travel { 0% { transform: translate(0, 0); opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)); opacity: 0; } }
@@ -686,12 +686,12 @@
   @page { margin: 14mm 16mm; }
   html, body { background: #fff !important; background-image: none !important; color: #000; }
   body:has(.rs-page) > :not(main) { display: none !important; }
-  .rs-page { padding: 0 !important; }
+  .rs-page { padding: 0 !important; --ink: #000; --ink-muted: #555; --rule: #999; --surface: #fff; }
   .rs-actions, .rs-note { display: none !important; }
   .rs-sheet { margin: 0; padding: 0; box-shadow: none; transform: none; background: #fff; }
   .rs-sheet * { color: #000 !important; }
   .rs-h2 { color: #444 !important; border-color: #999; }
-  .rs-item li::before { background: #000; }
+  .rs-item li::before { background: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .rs-contact a { background: none; }
   .rs-contact a::after { content: ""; }
 }
