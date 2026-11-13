@@ -22,10 +22,11 @@ export function NickHead({ hair = true, blue = true }: { hair?: boolean; blue?: 
         <path d={NICK.earCurl} strokeWidth="10" />
         {hair && (
           <>
+            <path d={NICK.hairFill} strokeWidth="10" stroke="var(--hair-fill)" />
             <path d={NICK.hairOuter} strokeWidth="11" />
-            <path d={NICK.hairInner} strokeWidth="11" />
+            <path d={NICK.hairInner} strokeWidth="10" />
             {NICK.hairCurls.map((d, i) => (
-              <path key={i} d={d} strokeWidth="10" />
+              <path key={i} d={d} strokeWidth="8" />
             ))}
           </>
         )}
@@ -35,8 +36,8 @@ export function NickHead({ hair = true, blue = true }: { hair?: boolean; blue?: 
       <g className="nick-eyes" filter="url(#crayon)" stroke="var(--figure-ink)" strokeLinecap="round">
         <CrayonPad x={130} y={205} w={150} h={60} />
         <g className="nick-pupils">
-          <path d={`M${NICK.pupilL[0]} ${NICK.pupilL[1]}h0.5`} strokeWidth="17" />
-          <path d={`M${NICK.pupilR[0]} ${NICK.pupilR[1]}h0.5`} strokeWidth="17" />
+          <path d={`M${NICK.pupilL[0]} ${NICK.pupilL[1]}h0.5`} strokeWidth="29" />
+          <path d={`M${NICK.pupilR[0]} ${NICK.pupilR[1]}h0.5`} strokeWidth="29" />
         </g>
         <g className="nick-squint" strokeWidth="11" strokeLinejoin="round">
           <path d={NICK.squintL} />

@@ -1,4 +1,4 @@
-import { hatch, smooth, type Pt } from "./geom";
+import { hatch, scribbleFill, smooth, type Pt } from "./geom";
 
 /** Pink for Mizu's tag and the cats' noses: crayon red rubbed thin over paper. */
 export const PINK = "var(--cat-pink)";
@@ -46,9 +46,15 @@ function blob(cx: number, cy: number, rx: number, ry: number, egg: number): Pt[]
 
 /** Siamese: colourpoint mask scribbled in around eyes and muzzle, dark ear insides. */
 export const SIAMESE = {
-  mask: hatch(blob(200, 250, 70, 58, 0.22), { angle: -28, gap: 10, seed: 4 }),
-  earL: hatch(EAR_IN_L, { angle: 70, gap: 10, seed: 6 }),
-  earR: hatch(EAR_IN_R, { angle: -70, gap: 10, seed: 7 }),
+  // dense scrubbed mask: muzzle and eyes, with the bridge of the nose running up the brow
+  mask:
+    scribbleFill(blob(200, 258, 66, 52, 0.24), { r: 9, gap: 10, angle: -14, seed: 4, inset: 2 }) +
+    scribbleFill([[194, 190], [206, 190], [226, 226], [174, 226]], { r: 7, gap: 8, angle: 80, seed: 5, inset: 1 }) +
+    hatch(blob(200, 258, 60, 48, 0.24), { angle: 32, gap: 9, seed: 9 }),
+  earL: scribbleFill(EAR_IN_L, { r: 6, gap: 7, angle: 60, seed: 6, inset: 0 }) + hatch(EAR_IN_L, { angle: 70, gap: 8, seed: 6 }),
+  earR: scribbleFill(EAR_IN_R, { r: 6, gap: 7, angle: -60, seed: 7, inset: 0 }) + hatch(EAR_IN_R, { angle: -70, gap: 8, seed: 7 }),
+  eyeL: "M132 228Q158 202 184 226Q160 248 132 228Z",
+  eyeR: "M216 226Q242 202 268 228Q240 248 216 226Z",
 };
 
 /** Tuxedo: black scribble everywhere except a white blaze and muzzle. */
@@ -71,14 +77,22 @@ export const TUXEDO = {
 export const MIZU_BODY = {
   left: smooth([[130, 316], [94, 376], [72, 452], [78, 510], [104, 538]]),
   right: smooth([[270, 316], [306, 376], [328, 452], [322, 510], [298, 538]]),
-  legL: smooth([[170, 396], [166, 468], [162, 524]]),
-  legR: smooth([[230, 396], [234, 468], [238, 524]]),
-  pawL: "M140 538C138 522 160 516 174 524C182 530 180 540 172 541Z",
-  pawR: "M228 541C220 540 218 530 226 524C240 516 262 522 260 538Z",
-  tuft: "M178 352l11 13 11-13 11 13 11-13",
+  // front legs: outlined (cream), not solid bars
+  legL: smooth([[148, 402], [144, 460], [142, 504]]),
+  legLi: smooth([[180, 414], [182, 470], [182, 504]]),
+  legR: smooth([[220, 414], [218, 470], [218, 504]]),
+  legRi: smooth([[252, 402], [256, 460], [258, 504]]),
+  // dark socks: the colourpoint paws
+  sockL: [[136, 500], [188, 500], [194, 528], [184, 543], [138, 543], [128, 528]] as Pt[],
+  sockR: [[212, 500], [264, 500], [272, 528], [262, 543], [216, 543], [206, 528]] as Pt[],
+  fluff: smooth([[168, 366], [178, 380], [186, 370], [196, 386], [206, 370], [216, 382], [226, 368], [234, 378]]),
   tail: smooth([[300, 528], [350, 538], [394, 520], [414, 478], [406, 440], [388, 424]]),
   blue: smooth([[70, 420], [54, 472], [62, 526]]),
   fill: smooth([[130, 300], [94, 376], [72, 452], [78, 510], [104, 540], [296, 540], [322, 510], [328, 452], [306, 376], [270, 300]], true),
+};
+export const MIZU_SOCKS = {
+  outline: smooth([...MIZU_BODY.sockL, MIZU_BODY.sockL[0]]) + smooth([...MIZU_BODY.sockR, MIZU_BODY.sockR[0]]),
+  fill: scribbleFill(MIZU_BODY.sockL, { r: 7, gap: 8, seed: 41, inset: 1 }) + scribbleFill(MIZU_BODY.sockR, { r: 7, gap: 8, seed: 42, inset: 1 }),
 };
 
 /** The tuxedo cat curled up asleep, in footer-scene units (ground at y=340). */

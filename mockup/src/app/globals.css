@@ -12,7 +12,7 @@
 :root {
   --paper: #f1eee9;
   --ink: #141412;
-  --ink-muted: #7a756b;
+  --ink-muted: #6b665c;
   --accent-red: #e5391f;
   --accent-blue: #1f4fd1;
   --highlight: #ffe14a;
@@ -40,7 +40,7 @@
 html[data-theme="dark"] {
   --paper: #171614;
   --ink: #ece7df;
-  --ink-muted: #968f83;
+  --ink-muted: #a39c90;
   --accent-red: #ff5b3d;
   --accent-blue: #7b97ff;
   --highlight: #ffd60a4d;

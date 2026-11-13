@@ -152,3 +152,42 @@ export function hatch(poly: readonly Pt[], opts: { angle?: number; gap?: number;
   if (!back.length) return "";
   return back.map((p, i) => `${i ? "L" : "M"}${r1(p[0])} ${r1(p[1])}`).join("");
 }
+
+/**
+ * Dense, messy scribble that fills a polygon with rows of tight overlapping loops,
+ * like scrubbing curly hair in with a crayon. Rows run at `angle` degrees, `gap` apart.
+ */
+export function scribbleFill(
+  poly: readonly Pt[],
+  opts: { r?: number; gap?: number; angle?: number; seed?: number; inset?: number } = {},
+): string {
+  const { r = 10, gap = 13, angle = -12, seed = 5, inset = 4 } = opts;
+  const rand = rng(seed);
+  const a = (angle * Math.PI) / 180;
+  const ca = Math.cos(a), sa = Math.sin(a);
+  const rp = poly.map(([x, y]) => [x * ca + y * sa, -x * sa + y * ca] as Pt);
+  const ys = rp.map((p) => p[1]);
+  const minY = Math.min(...ys), maxY = Math.max(...ys);
+  const back = (x: number, y: number): Pt => [x * ca - y * sa, x * sa + y * ca];
+  let d = "";
+  let row = 0;
+  for (let y = minY + r * 0.6; y < maxY - r * 0.2; y += gap, row++) {
+    const xs: number[] = [];
+    for (let i = 0; i < rp.length; i++) {
+      const p = rp[i], q = rp[(i + 1) % rp.length];
+      if ((p[1] <= y && q[1] > y) || (q[1] <= y && p[1] > y)) xs.push(p[0] + ((y - p[1]) / (q[1] - p[1])) * (q[0] - p[0]));
+    }
+    xs.sort((m, n) => m - n);
+    for (let k = 0; k + 1 < xs.length; k += 2) {
+      const x0 = xs[k] + inset + rand() * r * 0.6;
+      const x1 = xs[k + 1] - inset - rand() * r * 0.6;
+      const len = x1 - x0;
+      if (len < r) continue;
+      const yy = y - r + (rand() - 0.5) * r * 0.5;
+      const flip = row % 2 === 1;
+      const g: Pt[] = flip ? [back(x1, yy), back((x0 + x1) / 2, yy + (rand() - 0.5) * r), back(x0, yy)] : [back(x0, yy), back((x0 + x1) / 2, yy + (rand() - 0.5) * r), back(x1, yy)];
+      d += coil(g, { loops: Math.max(1, Math.round(len / (r * 1.25))), r, seed: seed * 31 + row * 7 + k, side: flip ? -1 : 1, lead: 0.95, jitter: 0.5, spread: 0.7 });
+    }
+  }
+  return d;
+}

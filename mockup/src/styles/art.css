@@ -18,7 +18,7 @@
 .mascot--live { cursor: pointer; outline: none; -webkit-tap-highlight-color: transparent; }
 .mascot--live:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 4px; border-radius: 50%; }
 .nick-squint { opacity: 0; }
-.mascot[data-poked] .mascot-body { animation: mascot-jolt 0.75s var(--ease-out) both; }
+.mascot[data-poked] .mascot-body { animation: mascot-jolt 1s both; }
 .mascot[data-poked] .nick-squint { animation: mascot-squint 1.7s steps(1, end) both; }
 .mascot[data-poked] .nick-pupils { animation: mascot-unsquint 1.7s steps(1, end) both; }
 .mascot[data-poked] .nick-lids { opacity: 0; }
@@ -28,11 +28,13 @@
 .mascot[data-poked] .mascot-star { animation-play-state: running; }
 
 @keyframes mascot-jolt {
-  0% { transform: none; }
-  12% { transform: translateY(8px) scale(1.06, 0.88); }
-  32% { transform: translateY(-10px) rotate(-9deg) scale(0.97, 1.05); }
-  52% { transform: rotate(6deg); }
-  72% { transform: rotate(-3deg); }
+  0% { transform: none; animation-timing-function: cubic-bezier(0.3, 0, 0.6, 1); }
+  10% { transform: translateY(10px) scale(1.08, 0.86); animation-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1); }
+  28% { transform: translateY(-14px) rotate(-10deg) scale(0.95, 1.07); }
+  46% { transform: translateY(2px) rotate(7deg) scale(1.02, 0.98); }
+  62% { transform: rotate(-4deg); }
+  76% { transform: rotate(2deg); }
+  88% { transform: rotate(-0.8deg); }
   100% { transform: none; }
 }
 @keyframes mascot-squint { 0% { opacity: 1; } 45% { opacity: 0; } }
@@ -136,16 +138,16 @@
 .mizu-tail, .mizu-head, .tux-breathe, .tux-head, .tux-z-letter, .nick-sit { transform-box: fill-box; }
 .mizu-tail { transform-origin: 0% 100%; animation: mizu-sway 4.8s ease-in-out infinite; }
 .scene-mizu:hover .mizu-tail { animation-duration: 1.4s; }
-.scene-mizu .cat-ear-l { animation: ear-twitch-l 5.2s ease-in-out infinite; }
-.scene-mizu .cat-ear-r { animation: ear-twitch-r 7.3s 1.4s ease-in-out infinite; }
+.scene-mizu .cat-ear-l { animation: ear-twitch-l 6.7s 0.6s ease-in-out infinite; }
+.scene-mizu .cat-ear-r { animation: ear-twitch-r 9.1s 3.3s ease-in-out infinite; }
 .mizu-head { transform-origin: 50% 85%; transition: transform 0.55s var(--ease-spring); }
 .scene-mizu:hover .mizu-head { transform: rotate(-11deg); }
 .nick-sit { transition: translate 0.4s var(--ease-spring); }
 .scene-nick:hover .nick-sit { translate: 0 -4px; }
-.tux-breathe { transform-origin: 50% 100%; animation: tux-breathe 3.8s ease-in-out infinite; }
-.tux-head { transform-origin: 50% 100%; animation: tux-head 3.8s ease-in-out infinite; }
-.tux-z-letter { opacity: 0; transform-origin: 50% 50%; animation: tux-z 3.3s ease-out infinite; }
-.scene-steam { stroke-dasharray: 22 12; animation: steam-up 1.8s linear infinite; }
+.tux-breathe { transform-origin: 50% 100%; animation: tux-breathe 4.6s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
+.tux-head { transform-origin: 50% 100%; animation: tux-head 4.6s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
+.tux-z-letter { opacity: 0; transform-origin: 50% 50%; animation: tux-z 3.6s cubic-bezier(0.25, 0.6, 0.4, 1) infinite; }
+.scene-steam { transform-box: fill-box; transform-origin: 50% 100%; opacity: 0; animation: steam-drift 2.9s cubic-bezier(0.3, 0, 0.4, 1) infinite; }
 
 @keyframes mizu-sway {
   0%, 100% { transform: rotate(-5deg); }
@@ -161,20 +163,25 @@
 .scene-nick:hover .nick-sit { --ey: -3 !important; --ex: 1 !important; }
 @keyframes scene-blink { 0%, 100% { opacity: 0; } 95% { opacity: 1; } 97.5% { opacity: 0; } }
 @keyframes scene-blink-pupils { 0%, 100% { opacity: 1; } 95% { opacity: 0; } 97.5% { opacity: 1; } }
-@keyframes ear-twitch-l { 0%, 88%, 100% { transform: none; } 91% { transform: rotate(-16deg); } 94% { transform: rotate(4deg); } }
-@keyframes ear-twitch-r { 0%, 90%, 100% { transform: none; } 93% { transform: rotate(16deg); } 96% { transform: rotate(-3deg); } }
-@keyframes tux-breathe { 50% { transform: scale(1.025, 1.06); } }
-@keyframes tux-head { 50% { transform: translateY(-1.4px); } }
+@keyframes ear-twitch-l { 0%, 84%, 100% { transform: none; } 86.5% { transform: rotate(-15deg); } 89% { transform: rotate(-2deg); } 90.5% { transform: rotate(-10deg); } 94% { transform: rotate(2deg); } 96% { transform: none; } }
+@keyframes ear-twitch-r { 0%, 88%, 100% { transform: none; } 91% { transform: rotate(14deg); } 95% { transform: rotate(-3deg); } 97% { transform: none; } }
+@keyframes tux-breathe { 0%, 100% { transform: none; } 42% { transform: scale(1.008, 1.03); } }
+@keyframes tux-head { 0%, 100% { transform: none; } 42% { transform: translateY(-0.7px); } }
 @keyframes tux-z {
   0% { opacity: 0; transform: translate(0, 0) scale(0.6); }
   20% { opacity: 1; }
   100% { opacity: 0; transform: translate(14px, -34px) scale(1.25) rotate(10deg); }
 }
-@keyframes steam-up { to { stroke-dashoffset: 34; } }
+@keyframes steam-drift {
+  0% { opacity: 0; transform: translate(0, 7px) scale(0.85, 0.7); }
+  28% { opacity: 0.95; }
+  60% { transform: translate(2px, -6px) scale(1, 1) skewX(-4deg); }
+  100% { opacity: 0; transform: translate(-1px, -18px) scale(1.05, 1.15) skewX(5deg); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .footer-scene *, .footer-scene *:hover { animation: none !important; transition: none !important; }
-  .tux-z-letter:first-child { opacity: 1; }
+  .tux-z-letter:first-child, .scene-steam { opacity: 1; }
 }
 
 /* ---------- Cat colours (artwork-local, derived from the theme tokens) ----------
@@ -195,3 +202,17 @@ html[data-theme="dark"] {
 }
 :root { --cat-face: transparent; }
 html[data-theme="dark"] { --cat-face: var(--cat-cream); }
+/* Siamese points: the darkest marks on the cat in both themes */
+:root {
+  --cat-mask: var(--figure-ink);
+  --cat-mask-pupil: var(--figure-ink);
+  --cat-glint: var(--paper);
+}
+html[data-theme="dark"] {
+  --cat-mask: color-mix(in srgb, var(--paper-shade) 94%, transparent);
+  --cat-mask-pupil: var(--paper-shade);
+  --cat-glint: var(--figure-ink);
+}
+/* Nick's hair mass stays a dark mop in dark mode; only its lumpy outline is light */
+:root { --hair-fill: var(--figure-ink); }
+html[data-theme="dark"] { --hair-fill: color-mix(in srgb, var(--figure-ink) 34%, var(--paper)); }

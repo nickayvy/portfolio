@@ -153,7 +153,7 @@ function useMascotLife(ref: React.RefObject<SVGSVGElement | null>, enabled: bool
       const dx = px - cx;
       const dy = py - cy;
       const d = Math.hypot(dx, dy) || 1;
-      const reach = Math.min(1, d / 260) * 7;
+      const reach = Math.min(1, d / 220) * 10;
       tx = (dx / d) * reach;
       ty = (dy / d) * reach * 0.8;
       ex += (tx - ex) * 0.22;

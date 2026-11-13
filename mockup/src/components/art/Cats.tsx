@@ -25,30 +25,32 @@ export function SiameseHead({ collar = true, solid = false, fill = "var(--cat-cr
     <g className="cat-siamese" stroke="var(--figure-ink)" strokeLinecap="round" strokeLinejoin="round">
       {/* each ear is its own small filtered group so it can twitch cheaply */}
       <g className="cat-ear cat-ear-l" filter="url(#crayon)">
-        <path d={SIAMESE.earL} strokeWidth="8" stroke="var(--cat-point)" />
+        <path d={SIAMESE.earL} strokeWidth="9" stroke="var(--cat-mask)" />
         <path d={CAT.earL} strokeWidth="10" />
       </g>
       <g className="cat-ear cat-ear-r" filter="url(#crayon)">
-        <path d={SIAMESE.earR} strokeWidth="8" stroke="var(--cat-point)" />
+        <path d={SIAMESE.earR} strokeWidth="9" stroke="var(--cat-mask)" />
         <path d={CAT.earR} strokeWidth="10" />
       </g>
       {solid && <path d={CAT.head} fill={fill} stroke="none" />}
-      <g filter="url(#crayon)" stroke="var(--cat-point)" strokeWidth="8">
+      <g filter="url(#crayon)" stroke="var(--cat-mask)" strokeWidth="12">
         <path d={SIAMESE.mask} />
       </g>
       <g filter="url(#crayon)">
         <path d={CAT.head} strokeWidth="10" />
-        <path d={CAT.eyeL} fill="var(--note)" strokeWidth="7" />
-        <path d={CAT.eyeR} fill="var(--note)" strokeWidth="7" />
-        <path d={CAT.nose} fill="var(--figure-ink)" strokeWidth="6" />
-        <path d={CAT.mouth} strokeWidth="7" />
         <path d={CAT.whiskersL} strokeWidth="5" />
         <path d={CAT.whiskersR} strokeWidth="5" />
       </g>
-      <g className="cat-eyes" filter="url(#crayon)" strokeLinecap="round">
+      {/* on the dark mask the muzzle is drawn in pale crayon, like a highlight */}
+      <g filter="url(#crayon)" stroke="var(--cat-glint)">
+        <path d={CAT.nose} fill="var(--cat-mask)" strokeWidth="5" />
+        <path d={CAT.mouth} strokeWidth="6" />
+      </g>
+      <g className="cat-eyes" filter="url(#crayon)" strokeLinecap="round" strokeLinejoin="round">
         <CrayonPad x={124} y={196} w={152} h={60} />
-        <path d="M158 226h.5M242 226h.5" stroke="var(--accent-blue)" strokeWidth="30" />
-        <path d="M158 227h.5M242 227h.5" stroke="var(--figure-ink)" strokeWidth="11" />
+        <path d={SIAMESE.eyeL + SIAMESE.eyeR} fill="var(--accent-blue)" stroke="var(--accent-blue)" strokeWidth="6" />
+        <path d="M158 225h.5M242 225h.5" stroke="var(--cat-mask-pupil)" strokeWidth="12" />
+        <path d="M152 218h.5M236 218h.5" stroke="var(--cat-glint)" strokeWidth="5" />
       </g>
       {collar && (
         <g filter="url(#crayon)" strokeLinecap="round">

@@ -1,4 +1,4 @@
-import { coil, rng, smooth, type Pt } from "./geom";
+import { coil, rng, scribbleFill, smooth, type Pt } from "./geom";
 
 /** Hand-drawn ring that overshoots its start a little, like a quick crayon circle. */
 export function ring(cx: number, cy: number, r: number, seed: number, over = 0.35, squash = 1): string {
@@ -29,6 +29,12 @@ export function spiral(cx: number, cy: number, r: number, seed: number): string 
   return smooth(pts);
 }
 
+/** Outline of Nick's mop: heavy on top, short at the sides, fringe dipping over the brow. */
+const MOP: Pt[] = [
+  [100, 204], [88, 172], [94, 134], [118, 104], [156, 80], [206, 68], [254, 74], [290, 96], [312, 130], [318, 166], [306, 198],
+  [284, 190], [262, 182], [246, 194], [224, 186], [204, 200], [182, 190], [160, 200], [140, 188], [118, 198],
+];
+
 /** Nick's head, in a 400×400 box. Shared by Mascot, MascotPropeller and FooterScene. */
 export const NICK = {
   face: smooth([
@@ -41,16 +47,21 @@ export const NICK = {
   faceRight: smooth([[303, 214], [306, 196]]),
   ear: smooth([[302, 222], [322, 214], [338, 230], [334, 256], [316, 268], [300, 262]]),
   earCurl: smooth([[317, 232], [326, 243], [316, 253]]),
+  /** dense dark mop: scribbled fill, a lumpy outline of bigger curls, a few strays */
+  hairFill: scribbleFill(MOP, { r: 10, gap: 12, angle: -10, seed: 4 }),
   hairOuter: coil(
-    [[102, 216], [80, 182], [82, 132], [116, 94], [180, 80], [236, 74], [286, 96], [318, 132], [328, 176], [313, 210]],
-    { loops: 12, r: 18, seed: 7, side: -1, lead: 0.8, jitter: 0.45, spread: 0.7 },
+    [[100, 204], [88, 172], [94, 134], [118, 104], [156, 80], [206, 68], [254, 74], [290, 96], [312, 130], [318, 166], [308, 198]],
+    { loops: 10, r: 11, seed: 7, side: -1, lead: 0.9, jitter: 0.9, spread: 1.3 },
   ),
   hairInner: coil(
-    [[108, 192], [124, 162], [164, 146], [208, 152], [252, 144], [290, 160], [306, 192]],
-    { loops: 7, r: 12, seed: 3, side: 1, lead: 0.75, jitter: 0.45, spread: 0.7 },
+    [[114, 194], [140, 186], [168, 196], [196, 186], [222, 198], [252, 184], [282, 190], [302, 200]],
+    { loops: 8, r: 9, seed: 3, side: 1, lead: 0.8, jitter: 0.5, spread: 0.7 },
   ),
   hairCurls: [
-    coil([[150, 122], [176, 108], [200, 104]], { loops: 2, r: 11, seed: 21, side: -1, lead: 0.8, jitter: 0.5 }),
+    spiral(132, 74, 13, 31),
+    spiral(232, 52, 12, 32),
+    spiral(326, 140, 11, 33),
+    spiral(102, 214, 9, 34),
   ],
   lensL: ring(158, 234, 37, 4),
   lensR: ring(253, 230, 36, 9),
@@ -65,7 +76,7 @@ export const NICK = {
   blinkR: smooth([[238, 234], [252, 239], [266, 234]]),
   squintL: smooth([[150, 226], [170, 236], [151, 246]]),
   squintR: smooth([[264, 222], [244, 232], [263, 242]]),
-  blueHair: smooth([[72, 196], [62, 150], [74, 104], [100, 76]]),
+  blueHair: smooth([[80, 192], [72, 150], [86, 110], [112, 82]]),
   blueJaw: smooth([[300, 282], [284, 306], [262, 324]]),
 };
 

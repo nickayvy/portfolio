@@ -7,7 +7,7 @@ import { PrintArt } from "./PrintArt";
 
 /** Fixed leans so the stack looks hand-placed (and server/client markup agree). */
 const LEANS = [2.5, -3, 4, -1.5, 3];
-const FLING_MS = 460;
+const FLING_MS = 620;
 
 /**
  * Hero photo stack: five placeholder prints. Click, Enter or Space flings the top print
