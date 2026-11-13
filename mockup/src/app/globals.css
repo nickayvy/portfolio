@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@import "../styles/shell.css";
+@import "../styles/art.css";
+@import "../styles/intro.css";
+@import "../styles/home.css";
+@import "../styles/pages.css";
+
+/* ------------------------------------------------------------------ *
+ * Design tokens. Owned by the project lead: do not edit without asking.
+ * Components use only these variables for colour, never raw hex.
+ * ------------------------------------------------------------------ */
+:root {
+  --paper: #f1eee9;
+  --ink: #141412;
+  --ink-muted: #7a756b;
+  --accent-red: #e5391f;
+  --accent-blue: #1f4fd1;
+  --highlight: #ffe14a;
+  --paper-shade: #d6cfc2;
+  --paper-fold: #e6e0d5;
+  --paper-edge: #f3efe7;
+  --note: #fbf8f0;
+  --note-rule: #6297c747;
+  --note-margin: #e5391f59;
+  --surface: #ffffff;
+  --figure-ink: var(--ink);
+  --rule: color-mix(in srgb, var(--ink) 22%, transparent);
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.3, 1.4, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.6, 0, 0.2, 1);
+
+  --col: 38rem; /* reading column */
+  --header-h: 64px;
+
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .065 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --paper: #171614;
+  --ink: #ece7df;
+  --ink-muted: #968f83;
+  --accent-red: #ff5b3d;
+  --accent-blue: #7b97ff;
+  --highlight: #ffd60a4d;
+  --paper-shade: #0b0a09;
+  --paper-fold: #2b2925;
+  --paper-edge: #211f1c;
+  --note: #22201c;
+  --note-rule: #7ba3d629;
+  --note-margin: #ff5b3d61;
+  --surface: #2c2a26;
+  --figure-ink: #c4baa9;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--ink-muted);
+  --color-red: var(--accent-red);
+  --color-blue: var(--accent-blue);
+  --color-highlight: var(--highlight);
+  --color-note: var(--note);
+  --color-surface: var(--surface);
+  --color-rule: var(--rule);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", var(--font-inter), "Helvetica Neue", Arial, sans-serif;
+  --font-hand: var(--font-caveat), "Bradley Hand", cursive;
+}
+
+html {
+  background: var(--paper);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--paper);
+  background-image: var(--grain);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
