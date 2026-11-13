@@ -47,7 +47,9 @@
     ".next-pages-build/types/**/*.ts",
     ".next-pages-build/dev/types/**/*.ts",
     ".next-home-build/types/**/*.ts",
-    ".next-home-build/dev/types/**/*.ts"
+    ".next-home-build/dev/types/**/*.ts",
+    ".next-qa2/types/**/*.ts",
+    ".next-qa2/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

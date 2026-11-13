@@ -46,12 +46,11 @@ export const NICK = {
     { loops: 12, r: 18, seed: 7, side: -1, lead: 0.8, jitter: 0.45, spread: 0.7 },
   ),
   hairInner: coil(
-    [[106, 198], [122, 168], [164, 152], [208, 160], [252, 150], [290, 168], [306, 200]],
-    { loops: 8, r: 12, seed: 3, side: 1, lead: 0.75, jitter: 0.45, spread: 0.7 },
+    [[108, 192], [124, 162], [164, 146], [208, 152], [252, 144], [290, 160], [306, 192]],
+    { loops: 7, r: 12, seed: 3, side: 1, lead: 0.75, jitter: 0.45, spread: 0.7 },
   ),
   hairCurls: [
-    coil([[128, 140], [150, 118], [180, 108]], { loops: 3, r: 11, seed: 21, side: -1, lead: 0.8, jitter: 0.5 }),
-    coil([[222, 104], [252, 112], [276, 132]], { loops: 3, r: 10, seed: 22, side: -1, lead: 0.8, jitter: 0.5 }),
+    coil([[150, 122], [176, 108], [200, 104]], { loops: 2, r: 11, seed: 21, side: -1, lead: 0.8, jitter: 0.5 }),
   ],
   lensL: ring(158, 234, 37, 4),
   lensR: ring(253, 230, 36, 9),
