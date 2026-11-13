@@ -31,6 +31,26 @@ export function PlaygroundDial() {
     setLayers((l) => (l[l.length - 1] === selected ? l : [...l.slice(-1), selected]));
   }, [selected]);
 
+  // The chroma video keeps playing only while its window is at or next to the notch. PlayPiece
+  // starts every video that touches the stage, which includes the faded slivers two steps away.
+  useEffect(() => {
+    const wheel = wheelRef.current;
+    if (!wheel) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    wheel.querySelectorAll<HTMLVideoElement>(".dial-hole video").forEach((v) => {
+      const hole = v.closest(".dial-hole");
+      const inView = hole?.querySelector(".pp")?.getAttribute("data-inview") === "true";
+      if (hole?.hasAttribute("data-far") || !inView || reduce) v.pause();
+      else v.play().catch(() => {});
+    });
+    const stopFar = (e: Event) => {
+      const v = e.target as HTMLElement;
+      if (v.closest(".dial-hole")?.hasAttribute("data-far")) (v as HTMLVideoElement).pause();
+    };
+    wheel.addEventListener("play", stopFar, true);
+    return () => wheel.removeEventListener("play", stopFar, true);
+  }, [selected]);
+
   const commit = useCallback((next: number, sound = true) => {
     const prev = posRef.current;
     if (next === prev) return;
@@ -209,6 +229,7 @@ export function PlaygroundDial() {
                     className="dial-hole"
                     data-k={k}
                     data-on={k === selected || undefined}
+                    data-far={Math.min(mod(k - selected, N), mod(selected - k, N)) > 1 || undefined}
                     style={{ "--a": `${k * STEP}deg` } as React.CSSProperties}
                     aria-hidden
                   >

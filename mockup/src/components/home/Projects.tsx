@@ -101,6 +101,8 @@ export function Projects() {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
     let pinned = mq.matches;
     let step = 0;
+    let railStart = 0;
+    let railLen = 1;
     let raf = 0;
     let active = -1;
     let inertia = 0;
@@ -116,13 +118,13 @@ export function Projects() {
       const cards = track.children;
       step = cards.length > 1 ? (cards[1] as HTMLElement).offsetLeft - (cards[0] as HTMLElement).offsetLeft : 0;
       section.style.setProperty("--rail-travel", `${step * (n - 1)}px`);
+      // cached here (resize / layout changes) so the per-frame scroll handler reads no layout
+      railStart = section.getBoundingClientRect().top + window.scrollY;
+      railLen = Math.max(1, section.offsetHeight - window.innerHeight);
     };
 
     /** Page-scroll range [start, length] across which the rail travels. */
-    const range = (): [number, number] => {
-      const top = section.getBoundingClientRect().top + window.scrollY;
-      return [top, Math.max(1, section.offsetHeight - window.innerHeight)];
-    };
+    const range = (): [number, number] => [railStart, railLen];
 
     const update = () => {
       raf = 0;
@@ -283,7 +285,11 @@ export function Projects() {
     ro.observe(document.body);
 
     window.addEventListener("scroll", onPageScroll, { passive: true });
-    window.addEventListener("resize", schedule, { passive: true });
+    const onResize = () => {
+      measure();
+      schedule();
+    };
+    window.addEventListener("resize", onResize, { passive: true });
     viewport.addEventListener("scroll", schedule, { passive: true });
     viewport.addEventListener("pointerdown", onDown);
     viewport.addEventListener("click", onClickCapture, true);
@@ -299,7 +305,7 @@ export function Projects() {
       ro.disconnect();
       window.removeEventListener("scroll", onPageScroll);
       window.clearTimeout(settle);
-      window.removeEventListener("resize", schedule);
+      window.removeEventListener("resize", onResize);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerup", onUp);
       window.removeEventListener("pointercancel", onUp);

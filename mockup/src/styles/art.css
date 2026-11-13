@@ -149,6 +149,10 @@
 .tux-z-letter { opacity: 0; transform-origin: 50% 50%; animation: tux-z 3.6s cubic-bezier(0.25, 0.6, 0.4, 1) infinite; }
 .scene-steam { transform-box: fill-box; transform-origin: 50% 100%; opacity: 0; animation: steam-drift 2.9s cubic-bezier(0.3, 0, 0.4, 1) infinite; }
 
+/* SVG scale animations run on the main thread. Giving the filtered drawing inside its own
+   layer means a frame only moves that layer instead of re-running the crayon filter. */
+.tux-breathe > g, .scene-steam > g { will-change: transform; }
+
 @keyframes mizu-sway {
   0%, 100% { transform: rotate(-5deg); }
   22% { transform: rotate(9deg); }

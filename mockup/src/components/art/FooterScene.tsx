@@ -79,9 +79,14 @@ export function FooterScene({ className }: { className?: string }) {
       >
         <rect x="58" y="168" width="140" height="172" fill="transparent" />
         <g transform="translate(68 146) scale(0.36)">
-          <g className="mizu-tail" filter="url(#crayon)" {...ink}>
-            <CrayonPad x={290} y={410} w={140} h={140} />
-            <path d={MIZU_BODY.tail} strokeWidth="24" />
+          {/* the filter sits on an inner group: a filtered element that is itself animated is
+              re-rasterised (three turbulence passes) every frame, an unfiltered wrapper can
+              be rotated on the compositor */}
+          <g className="mizu-tail">
+            <g filter="url(#crayon)" {...ink}>
+              <CrayonPad x={290} y={410} w={140} h={140} />
+              <path d={MIZU_BODY.tail} strokeWidth="24" />
+            </g>
           </g>
           <path d={MIZU_BODY.fill} fill="var(--cat-cream)" />
           <g filter="url(#crayon)" {...ink}>

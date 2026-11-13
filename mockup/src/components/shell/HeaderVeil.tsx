@@ -2,8 +2,8 @@
 
 /**
  * Header veil: a fixed band behind the header where content blurs and fades
- * into paper as it scrolls underneath. Three stacked backdrop-filter layers
- * with progressively shorter gradient masks give a graduated blur. Invisible
+ * into paper as it scrolls underneath. Two stacked backdrop-filter layers
+ * with gradient masks give a graduated blur. Invisible
  * (and not blurring anything) at the very top of the page.
  */
 import { useEffect, useRef } from "react";
@@ -37,7 +37,6 @@ export function HeaderVeil() {
 
   return (
     <div ref={ref} className="shell-veil" aria-hidden="true">
-      <span />
       <span />
       <span />
     </div>

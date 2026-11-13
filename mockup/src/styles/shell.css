@@ -139,7 +139,8 @@ html[data-loader-fade] .shell-loader {
 }
 
 /* ------------------------------------------------------------------ *
- * Header veil: graduated blur + paper fade behind the header
+ * Header veil: graduated blur + paper fade behind the header (every backdrop-filter
+ * layer is a full backdrop blur per scroll frame, so keep them few and small)
  * ------------------------------------------------------------------ */
 .shell-veil {
   position: fixed;
@@ -169,20 +170,19 @@ html[data-menu-open] .shell-veil {
   position: absolute;
   inset: 0;
 }
+/* Two graduated layers: a soft blur over the whole band and a stronger one over its top
+ * 48%. The second box is sized to its own mask so it only blurs the pixels it shows. */
 .shell-veil span:nth-child(1) {
-  -webkit-backdrop-filter: blur(1.5px);
-  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  backdrop-filter: blur(2.5px);
   mask-image: linear-gradient(to bottom, #000 35%, transparent 100%);
 }
 .shell-veil span:nth-child(2) {
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  mask-image: linear-gradient(to bottom, #000 20%, transparent 70%);
-}
-.shell-veil span:nth-child(3) {
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  mask-image: linear-gradient(to bottom, #000 0%, transparent 45%);
+  bottom: auto;
+  height: 48%;
+  -webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
 }
 .shell-veil::after {
   content: "";

@@ -23,17 +23,20 @@ export function SectionProgress() {
   const [show, setShow] = useState(false);
   const [hidden, setHidden] = useState(false);
   const hover = useRef(false);
+  const recheck = useRef<() => void>(() => {});
 
   useEffect(() => {
     const nav = navRef.current;
     if (!nav) return;
     const ticks = Array.from(nav.querySelectorAll<HTMLElement>("[data-tick]"));
+    const label = nav.querySelector<HTMLElement>(".shell-progress-label");
     let tops: number[] = [];
     let bottoms: number[] = [];
     let raf = 0;
     let hideTimer = 0;
     let cur = -1;
     let lastHidden = false;
+    let lastRead = "";
     let first = true;
 
     const measure = () => {
@@ -54,6 +57,18 @@ export function SectionProgress() {
 
     const update = () => {
       raf = 0;
+      // read layout first, write after: the nav's own style writes below would otherwise
+      // force a style + layout pass for these rect reads on every scroll frame
+      const nr = nav.getBoundingClientRect();
+      const lr = label ? label.getBoundingClientRect() : nr;
+      let overlap = false;
+      const hits = (r: DOMRect, b: DOMRect) =>
+        r.bottom > b.top - 8 && r.top < b.bottom + 8 && r.right > b.left - 8 && r.left < b.right + 8;
+      document.querySelectorAll(AVOID).forEach((el) => {
+        const r = el.getBoundingClientRect();
+        // the name pill sits to the left of the ticks and is the part that reaches the art
+        if (hits(r, nr) || hits(r, lr)) overlap = true;
+      });
       const y = window.scrollY;
       const vh = window.innerHeight;
       const probe = y + vh * 0.4;
@@ -69,22 +84,21 @@ export function SectionProgress() {
       read = Math.min(1, Math.max(0, read));
       ticks.forEach((t, i) => {
         const state = i < idx ? "read" : i === idx ? "current" : "ahead";
-        if (t.dataset.state !== state) t.dataset.state = state;
+        if (t.dataset.state === state) return;
+        t.dataset.state = state;
         if (state === "current") t.setAttribute("aria-current", "location");
         else t.removeAttribute("aria-current");
       });
-      nav.style.setProperty("--read", read.toFixed(3));
+      const readStr = read.toFixed(3);
+      if (readStr !== lastRead) {
+        lastRead = readStr;
+        nav.style.setProperty("--read", readStr);
+      }
       if (idx !== cur) {
         cur = idx;
         setCurrent(idx);
       }
       // step aside where it would overlap the footer illustration
-      const nr = nav.getBoundingClientRect();
-      let overlap = false;
-      document.querySelectorAll(AVOID).forEach((el) => {
-        const r = el.getBoundingClientRect();
-        if (r.bottom > nr.top - 8 && r.top < nr.bottom + 8 && r.right > nr.left - 8 && r.left < nr.right + 8) overlap = true;
-      });
       if (overlap !== lastHidden) {
         lastHidden = overlap;
         setHidden(overlap);
@@ -104,6 +118,7 @@ export function SectionProgress() {
       }, HIDE_AFTER);
     };
 
+    recheck.current = schedule;
     measure();
     update();
     // the first scroll event can be the browser restoring position
@@ -130,6 +145,11 @@ export function SectionProgress() {
   }, []);
 
   const s = sections[current];
+
+  // the name pill changes width and row with the section: re-test it against the artwork
+  useEffect(() => {
+    recheck.current();
+  }, [current]);
 
   const reveal = (on: boolean) => {
     hover.current = on;
@@ -164,6 +184,7 @@ export function SectionProgress() {
               href={`#${sec.id}`}
               data-tick=""
               data-state={i === 0 ? "current" : "ahead"}
+              aria-current={i === 0 ? "location" : undefined}
               aria-label={`${String(i + 1).padStart(2, "0")} ${sec.label}`}
               onClick={() => playSound("tick")}
             >
