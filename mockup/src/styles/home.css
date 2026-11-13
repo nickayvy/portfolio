@@ -92,9 +92,7 @@ button:focus-visible .link-arrow {
   line-height: 16px;
   letter-spacing: 0;
   color: #f1eee9;
-  background: rgb(20 20 18 / 0.55);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgb(20 20 18 / 0.62);
   pointer-events: none;
 }
 
@@ -178,9 +176,7 @@ button:focus-visible .link-arrow {
   gap: 5px;
   padding: 5px 7px;
   border-radius: 999px;
-  background: rgb(20 20 18 / 0.35);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgb(20 20 18 / 0.45);
   opacity: 0;
   transition: opacity 300ms var(--ease-out);
 }
