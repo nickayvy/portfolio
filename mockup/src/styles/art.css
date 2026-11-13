@@ -1,1 +1,127 @@
 /* art styles. See SPEC for the owner of this file. */
+
+/* ---------- Nick's head ---------- */
+.nick-pupils { transform: translate(calc(var(--ex, 0) * 1px), calc(var(--ey, 0) * 1px)); }
+.nick-lids { opacity: 0; }
+.nick-eyes[data-shut] .nick-lids { opacity: 1; }
+.nick-eyes[data-shut] .nick-pupils { opacity: 0; }
+
+/* Looping animations stop while their drawing is off screen (see usePauseOffscreen). */
+[data-paused] *,
+[data-paused] *::before,
+[data-paused] *::after { animation-play-state: paused !important; }
+
+/* ---------- Mascot ---------- */
+.mascot { overflow: visible; }
+.mascot-tilt { transform: rotate(-4deg); transform-origin: 205px 215px; }
+.mascot-body { transform-origin: 205px 330px; }
+.mascot--live { cursor: pointer; outline: none; -webkit-tap-highlight-color: transparent; }
+.mascot--live:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 4px; border-radius: 50%; }
+.nick-squint { opacity: 0; }
+.mascot[data-poked] .mascot-body { animation: mascot-jolt 0.75s var(--ease-out) both; }
+.mascot[data-poked] .nick-squint { animation: mascot-squint 1.7s steps(1, end) both; }
+.mascot[data-poked] .nick-pupils,
+.mascot[data-poked] .nick-lids { animation: mascot-unsquint 1.7s steps(1, end) both; }
+.mascot-dizzy { opacity: 0; pointer-events: none; }
+.mascot-star { animation: mascot-orbit 0.9s linear infinite paused; }
+.mascot[data-poked] .mascot-dizzy { animation: mascot-dizzy 1.7s var(--ease-out) both; }
+.mascot[data-poked] .mascot-star { animation-play-state: running; }
+
+@keyframes mascot-jolt {
+  0% { transform: none; }
+  12% { transform: translateY(8px) scale(1.06, 0.88); }
+  32% { transform: translateY(-10px) rotate(-9deg) scale(0.97, 1.05); }
+  52% { transform: rotate(6deg); }
+  72% { transform: rotate(-3deg); }
+  100% { transform: none; }
+}
+@keyframes mascot-squint { 0% { opacity: 1; } 45% { opacity: 0; } }
+@keyframes mascot-unsquint { 0% { opacity: 0; } 45% { opacity: 1; } }
+@keyframes mascot-dizzy {
+  0% { opacity: 0; }
+  12%, 78% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes mascot-orbit {
+  0% { transform: translate(330px, 46px) scale(1); }
+  12.5% { transform: translate(294px, 64px) scale(1.1); }
+  25% { transform: translate(205px, 72px) scale(1.15); }
+  37.5% { transform: translate(116px, 64px) scale(1.1); }
+  50% { transform: translate(80px, 46px) scale(1); }
+  62.5% { transform: translate(116px, 28px) scale(0.8); }
+  75% { transform: translate(205px, 20px) scale(0.7); }
+  87.5% { transform: translate(294px, 28px) scale(0.8); }
+  100% { transform: translate(330px, 46px) scale(1); }
+}
+
+/* propeller blades spin edge-on (a squashing scaleX reads as rotation about the stem) */
+.propeller { transform-origin: 206px 40px; animation: propeller-spin 0.5s linear infinite; }
+@keyframes propeller-spin {
+  0% { transform: scaleX(1); }
+  25% { transform: scaleX(0.06); }
+  50% { transform: scaleX(-1); }
+  75% { transform: scaleX(0.06); }
+  100% { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .propeller,
+  .mascot[data-poked] .mascot-body,
+  .mascot[data-poked] .mascot-dizzy { animation: none; }
+}
+
+/* ---------- Signature ---------- */
+.signature { overflow: visible; }
+.signature[data-draw] path {
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: 1;
+  animation: sig-draw var(--sig-dur) var(--sig-delay) cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+}
+@keyframes sig-draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .signature[data-draw] path { animation: none; stroke-dashoffset: 0; }
+}
+
+/* ---------- Inline doodles ---------- */
+.doodle {
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  margin-inline: 0.06em;
+  vertical-align: -0.28em;
+  line-height: 0;
+}
+.doodle svg { width: 100%; height: 100%; overflow: visible; }
+.doodle g, .doodle path { transform-box: fill-box; transform-origin: 50% 50%; }
+.doodle .dd-lift, .doodle .dd-turn, .doodle .dd-spin, .doodle .dd-tassel, .doodle .dd-ear-l, .doodle .dd-ear-r {
+  transition: transform 0.5s var(--ease-spring);
+}
+.doodle .dd-flame { transform-origin: 50% 0%; }
+.doodle .dd-tassel { transform-origin: 0% 0%; }
+.doodle .dd-ear-l { transform-origin: 100% 100%; }
+.doodle .dd-ear-r { transform-origin: 0% 100%; }
+.doodle .dd-turn { transform-origin: 70% 30%; }
+.doodle .dd-caret { opacity: 1; }
+
+.doodle:hover .dd-lift { transform: translateY(-1.6px); }
+.doodle:hover .dd-flame { animation: dd-flicker 0.16s ease-in-out infinite alternate; }
+.doodle:hover .dd-turn { transform: rotate(-28deg); }
+.doodle:hover .dd-spin { transform: rotate(90deg); transition-duration: 0.7s; }
+.doodle:hover .dd-tassel { animation: dd-swing 0.9s var(--ease-out); }
+.doodle:hover .dd-ear-l { animation: dd-twitch-l 0.5s ease-in-out; }
+.doodle:hover .dd-ear-r { animation: dd-twitch-r 0.5s 0.12s ease-in-out; }
+.doodle:hover .dd-steam { animation: dd-steam 0.9s ease-in-out infinite; }
+.doodle:hover .dd-caret { animation: dd-blink 0.9s steps(1, end) infinite; }
+.doodle:hover .dd-flow { stroke-dasharray: 5 2.4; animation: dd-flow 0.6s linear infinite; }
+
+@keyframes dd-flicker { to { transform: scaleY(1.4); } }
+@keyframes dd-swing { 0% { transform: rotate(0); } 25% { transform: rotate(18deg); } 55% { transform: rotate(-10deg); } 80% { transform: rotate(4deg); } }
+@keyframes dd-twitch-l { 40% { transform: rotate(-14deg); } }
+@keyframes dd-twitch-r { 40% { transform: rotate(14deg); } }
+@keyframes dd-steam { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(-2px); opacity: 0.2; } }
+@keyframes dd-blink { 50% { opacity: 0; } }
+@keyframes dd-flow { to { stroke-dashoffset: -7.4; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .doodle *, .doodle:hover * { animation: none !important; transition: none !important; transform: none !important; }
+}

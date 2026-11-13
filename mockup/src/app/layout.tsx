@@ -6,6 +6,8 @@ import { Header } from "@/components/shell/Header";
 import { HeaderVeil } from "@/components/shell/HeaderVeil";
 import { Loader } from "@/components/shell/Loader";
 import { RevealObserver } from "@/components/shell/RevealObserver";
+import { ScrollManager } from "@/components/shell/ScrollManager";
+import { ShellScript } from "@/components/shell/ShellScript";
 import { meta } from "@/content/site";
 import "./globals.css";
 
@@ -20,7 +22,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${caveat.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${caveat.variable}`}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
+      <head>
+        <ShellScript />
+      </head>
       <body>
         <CrayonDefs />
         <Loader />
@@ -29,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <CursorLabel />
         <RevealObserver />
+        <ScrollManager />
       </body>
     </html>
   );
