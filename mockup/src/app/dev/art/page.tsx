@@ -3,11 +3,14 @@ import { Signature } from "@/components/art/Signature";
 import { Doodle } from "@/components/art/Doodle";
 import { CatFace } from "@/components/art/Cats";
 import { FooterScene } from "@/components/art/FooterScene";
+import { Intro } from "@/components/home/Intro";
 
 const DOODLES = ["rocket", "wrench", "bowl", "cap", "terminal", "cat", "gear", "stream"] as const;
 
 export default function ArtPreview() {
   return (
+    <>
+    <Intro />
     <main className="space-y-10 p-10">
       <section id="mascot" className="flex flex-wrap items-end gap-10">
         <Mascot className="w-[112px]" interactive />
@@ -46,5 +49,6 @@ export default function ArtPreview() {
         ))}
       </section>
     </main>
+    </>
   );
 }

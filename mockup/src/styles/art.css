@@ -162,3 +162,22 @@
   .footer-scene *, .footer-scene *:hover { animation: none !important; transition: none !important; }
   .tux-z-letter:first-child { opacity: 1; }
 }
+
+/* ---------- Cat colours (artwork-local, derived from the theme tokens) ----------
+ * Light: points and fur are wax ink on paper. Dark: the outline turns light, so the
+ * cats' dark points/fur use the shade below the paper and their pale fur a cream,
+ * which keeps Mizu pale-with-dark-points and the tuxedo black-and-white in both themes. */
+:root {
+  --cat-cream: var(--paper);
+  --cat-point: color-mix(in srgb, var(--figure-ink) 62%, transparent);
+  --cat-fur: color-mix(in srgb, var(--figure-ink) 90%, transparent);
+  --cat-pink: color-mix(in srgb, var(--accent-red) 42%, var(--paper));
+}
+html[data-theme="dark"] {
+  --cat-cream: color-mix(in srgb, var(--figure-ink) 30%, var(--paper));
+  --cat-point: color-mix(in srgb, var(--paper-shade) 85%, transparent);
+  --cat-fur: color-mix(in srgb, var(--paper-shade) 92%, transparent);
+  --cat-pink: color-mix(in srgb, var(--accent-red) 55%, var(--figure-ink));
+}
+:root { --cat-face: transparent; }
+html[data-theme="dark"] { --cat-face: var(--cat-cream); }

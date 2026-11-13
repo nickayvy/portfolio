@@ -1,7 +1,7 @@
 import { hatch, smooth, type Pt } from "./geom";
 
 /** Pink for Mizu's tag and the cats' noses: crayon red rubbed thin over paper. */
-export const PINK = "color-mix(in srgb, var(--accent-red) 42%, var(--paper))";
+export const PINK = "var(--cat-pink)";
 
 const mirror = (pts: Pt[]): Pt[] => pts.map(([x, y]) => [400 - x, y] as Pt).reverse();
 
@@ -78,6 +78,7 @@ export const MIZU_BODY = {
   tuft: "M178 352l11 13 11-13 11 13 11-13",
   tail: smooth([[300, 528], [350, 538], [394, 520], [414, 478], [406, 440], [388, 424]]),
   blue: smooth([[70, 420], [54, 472], [62, 526]]),
+  fill: smooth([[130, 300], [94, 376], [72, 452], [78, 510], [104, 540], [296, 540], [322, 510], [328, 452], [306, 376], [270, 300]], true),
 };
 
 /** The tuxedo cat curled up asleep, in footer-scene units (ground at y=340). */

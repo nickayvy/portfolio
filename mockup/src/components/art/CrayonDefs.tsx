@@ -19,7 +19,7 @@ export function CrayonDefs() {
           <feTurbulence type="fractalNoise" baseFrequency="0.021" numOctaves="2" seed="17" result="bend" />
           <feDisplacementMap in="SourceGraphic" in2="bend" scale="7" xChannelSelector="G" yChannelSelector="B" result="bent" />
           <feTurbulence type="turbulence" baseFrequency="0.38" numOctaves="1" seed="3" result="tooth" />
-          <feDisplacementMap in="bent" in2="tooth" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="rough" />
+          <feDisplacementMap in="bent" in2="tooth" scale="1.5" xChannelSelector="R" yChannelSelector="G" result="rough" />
           <feTurbulence type="fractalNoise" baseFrequency="0.7 0.55" numOctaves="2" seed="29" result="grain" />
           <feColorMatrix
             in="grain"

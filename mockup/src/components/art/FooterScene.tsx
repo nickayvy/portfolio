@@ -2,8 +2,8 @@
 
 import { useRef } from "react";
 import { playSound } from "@/lib/sound";
-import { SiameseHead, TuxedoHead } from "./Cats";
-import { MIZU_BODY, TUX_CURL } from "./cats";
+import { SiameseHead, TuxCurled } from "./Cats";
+import { MIZU_BODY } from "./cats";
 import { CrayonPad } from "./CrayonDefs";
 import { NickHead } from "./NickHead";
 import { NICK } from "./nick";
@@ -78,16 +78,17 @@ export function FooterScene({ className }: { className?: string }) {
         <g transform="translate(68 146) scale(0.36)">
           <g className="mizu-tail" filter="url(#crayon)" {...ink}>
             <CrayonPad x={290} y={410} w={140} h={140} />
-            <path d={MIZU_BODY.tail} strokeWidth="24" opacity="0.85" />
+            <path d={MIZU_BODY.tail} strokeWidth="24" />
           </g>
+          <path d={MIZU_BODY.fill} fill="var(--cat-cream)" />
           <g filter="url(#crayon)" {...ink}>
             <path d={MIZU_BODY.blue} stroke="var(--accent-blue)" strokeWidth="22" opacity="0.9" />
             <path d={MIZU_BODY.left} strokeWidth="22" />
             <path d={MIZU_BODY.right} strokeWidth="22" />
             <path d={MIZU_BODY.legL} strokeWidth="20" />
             <path d={MIZU_BODY.legR} strokeWidth="20" />
-            <path d={MIZU_BODY.pawL} strokeWidth="16" fill="var(--figure-ink)" fillOpacity="0.55" />
-            <path d={MIZU_BODY.pawR} strokeWidth="16" fill="var(--figure-ink)" fillOpacity="0.55" />
+            <path d={MIZU_BODY.pawL} strokeWidth="16" fill="var(--cat-point)" />
+            <path d={MIZU_BODY.pawR} strokeWidth="16" fill="var(--cat-point)" />
           </g>
           <g className="mizu-head">
             <SiameseHead solid />
@@ -124,22 +125,7 @@ export function FooterScene({ className }: { className?: string }) {
       {/* the tuxedo, asleep */}
       <g className="scene-tux" data-cursor="Zzz">
         <rect x="470" y="250" width="124" height="92" fill="transparent" />
-        <g className="tux-breathe">
-          <g filter="url(#crayon)" {...ink}>
-            <path d={TUX_CURL.fur} strokeWidth="8" opacity="0.88" />
-            <path d={TUX_CURL.body} strokeWidth="7" />
-            <path d={TUX_CURL.tail} strokeWidth="11" />
-          </g>
-        </g>
-        <g className="tux-head">
-          <g transform="translate(456 268) scale(0.2)">
-            <TuxedoHead solid />
-          </g>
-          <g filter="url(#crayon)" {...ink}>
-            <path d={TUX_CURL.pawL} strokeWidth="4" fill="var(--paper)" />
-            <path d={TUX_CURL.pawR} strokeWidth="4" fill="var(--paper)" />
-          </g>
-        </g>
+        <TuxCurled breathe />
         <g className="tux-z" {...ink} strokeWidth="3.2">
           {[0, 1, 2].map((i) => (
             <path key={i} className="tux-z-letter" style={{ animationDelay: `${i * 1.1}s` }} d="M520 276h8l-8 9h8" />

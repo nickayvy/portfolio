@@ -36,8 +36,11 @@ function Card({ project, index }: { project: Project; index: number }) {
           className="rail-cover"
           data-cursor="View project"
           data-hover={hover || undefined}
-          onPointerEnter={(e) => {
-            if (e.pointerType !== "mouse") return;
+          onPointerMove={(e) => {
+            // Only a real pointer move starts the cycle: cards sliding under a resting
+            // pointer while the page scrolls (synthetic moves, no movement) must not.
+            if (hover || e.pointerType !== "mouse" || e.buttons !== 0) return;
+            if (e.movementX === 0 && e.movementY === 0) return;
             setHover(true);
             setSlide((s) => (project.slides > 1 ? (s + 1) % project.slides : s));
           }}
@@ -134,6 +137,20 @@ export function Projects() {
     };
     const schedule = () => {
       if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    // While the page scrolls, cards slide under a resting pointer: switch off their hit
+    // testing until scrolling settles so hover effects don't churn mid-scroll.
+    let settle = 0;
+    const onPageScroll = () => {
+      schedule();
+      if (!pinned || drag) return;
+      if (!settle) track.dataset.scrolling = "true";
+      window.clearTimeout(settle);
+      settle = window.setTimeout(() => {
+        settle = 0;
+        delete track.dataset.scrolling;
+      }, 140);
     };
 
     const scrollPageTo = (y: number, smooth = false) =>
@@ -265,7 +282,7 @@ export function Projects() {
     ro.observe(track);
     ro.observe(document.body);
 
-    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("scroll", onPageScroll, { passive: true });
     window.addEventListener("resize", schedule, { passive: true });
     viewport.addEventListener("scroll", schedule, { passive: true });
     viewport.addEventListener("pointerdown", onDown);
@@ -280,7 +297,8 @@ export function Projects() {
       cancelAnimationFrame(raf);
       stopInertia();
       ro.disconnect();
-      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("scroll", onPageScroll);
+      window.clearTimeout(settle);
       window.removeEventListener("resize", schedule);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerup", onUp);

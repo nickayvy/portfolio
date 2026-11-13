@@ -279,7 +279,8 @@ button:focus-visible .link-arrow {
   .rail-viewport[data-dragging] {
     cursor: grabbing;
   }
-  .rail-viewport[data-dragging] .rail-link {
+  .rail-viewport[data-dragging] .rail-link,
+  .rail-track[data-scrolling] {
     pointer-events: none;
   }
   .rail-track {
@@ -1008,4 +1009,7 @@ html[data-theme="dark"] {
   .contact-typing i {
     animation: none;
   }
+}
+html[data-theme="dark"] .contact-chip:first-child {
+  color: var(--paper);
 }
